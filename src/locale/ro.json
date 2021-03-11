@@ -1,0 +1,12 @@
+{
+  "locale": "ro",
+  "nav": "",
+  "main": "",
+  "footer": {
+    "img_up": {
+      "src": "img/svg/arrow-up.svg",
+      "alt": "Up"
+    },
+    "up_path": "#pageTop"
+  }
+}
