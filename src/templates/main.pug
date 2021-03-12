@@ -1,4 +1,35 @@
-- const main = LANG.main;
+- const mainContent = LANG.main;
 
-main
+main#pageTop
     section.main
+        .container
+            .main__logo-wrap
+                a(href=mainContent.logo_path).main__logo= mainContent.logo
+            .main__content-block
+                block nav
+                    include nav.pug
+                .main__content
+                    p.main__promotion
+                    p.main__text
+                    .main__timer-block
+                    p.main__text
+                    a(href=mainContent.btn_path).main__button-block
+                        each char in mainContent.btn
+                            span.main__button-text= char
+                        each char in mainContent.btn
+                            span.main__button-text= char
+            .main__central
+                img&attributes(mainContent.img).main__img
+                h1.main__title= mainContent.title
+    block reasons
+        include reasons.pug
+    block assortment
+        include assortment.pug
+    block promotion
+        include promotion.pug
+    block sizes
+        include sizes.pug
+    block testimonials
+        include testimonials.pug
+    block order
+        include order.pug

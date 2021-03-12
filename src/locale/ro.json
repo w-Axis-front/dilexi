@@ -1,12 +1,49 @@
 {
   "locale": "ro",
-  "nav": "",
-  "main": "",
-  "footer": {
-    "img_up": {
-      "src": "img/svg/arrow-up.svg",
-      "alt": "Up"
+  "nav": {
+    "item1": "Блузки Dilexi",
+    "item1_path": "#reasons",
+    "item2": "Ассортимент",
+    "item2_path": "#assortment",
+    "item3": "Акция",
+    "item3_path": "#promotion",
+    "item4_path": "#sizes",
+    "item4": "Размеры",
+    "item5": "Отзывы",
+    "item5_path": "#testimonials",
+    "item6": "Заказать",
+    "item6_path": "#order"
+  },
+  "main": {
+    "logo_path": "/",
+    "logo": "Dilexi",
+    "img": {
+      "src": "img/main.jpg",
+      "alt": "Girl",
+      "srcset": "img/main@2x.jpg 2x"
     },
-    "up_path": "#pageTop"
+    "title": "Ликвидация склада итальянского бренда Dilexi!",
+    "btn": ["О", "Ф", "О", "Р", "М", "И", "Т", "Ь", "З", "А", "К", "А", "З"],
+    "btn_path": "#order"
+  },
+  "reasons": "",
+  "assortment": "",
+  "promotion": "",
+  "sizes": "",
+  "testimonials": "",
+  "order": "",
+  "footer": {
+    "up_path": "#pageTop",
+    "logo_path": "/",
+    "logo": "Dilexi",
+    "item1": "Terms & Conditions",
+    "item1_path": "/",
+    "item2": "Privacy Policy",
+    "item2_path": "/",
+    "item3": "Feedback",
+    "item3_path": "/",
+    "copyright1": "2021 Copyright. All rights reserved.",
+    "copyright2": "© TerraLeads",
+    "acceptance": "By clicking the “order” button you confirm that you have read Privat Policy and give your consent to the procession of your personal data"
   }
 }
