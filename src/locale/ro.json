@@ -12,11 +12,38 @@
     "item5": "Отзывы",
     "item5_path": "#testimonials",
     "item6": "Заказать",
-    "item6_path": "#order"
+    "item6_path": "#order",
+    "burger": [{
+      "nav_path": "Блузки Dilexi",
+      "nav_link": "#reasons"
+    }, {
+      "nav_path": "Ассортимент",
+      "nav_link": "#assortment"
+    }, {
+      "nav_path": "Акция",
+      "nav_link": "#promotion"
+    }, {
+      "nav_path": "Размеры",
+      "nav_link": "#sizes"
+    }, {
+      "nav_path": "Отзывы",
+      "nav_link": "#testimonials"
+    }, {
+      "nav_path": "Заказать",
+      "nav_link": "#order"
+    }]
   },
   "main": {
     "logo_path": "/",
     "logo": "Dilexi",
+    "promotion1": "-75%",
+    "promotion2": "на блузки",
+    "timer_text": "До конца акции осталось:",
+    "remaining_time": "00",
+    "days": "дней",
+    "hours": "часов",
+    "minutes": "минут",
+    "text": "Успей заказать модные\n универсальные блузки по супер цене!",
     "img": {
       "src": "img/main.jpg",
       "alt": "Girl",

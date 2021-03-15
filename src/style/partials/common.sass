@@ -27,11 +27,11 @@ body
   border-radius: 30px
   transition: .3s
 
-  &:hover, &:focus, &:active, &:focus-visible
-    background-color: $mainColor
-
   &:visited
     background-color: $btnColor
+
+  &:hover, &:focus, &:active, &:focus-visible
+    background-color: $mainColor
 
 .button-action
   font-weight: 500
@@ -89,3 +89,4 @@ input
 @media screen and (max-width: $xxs)
   .container
     max-width: none
+    padding: 0 20px

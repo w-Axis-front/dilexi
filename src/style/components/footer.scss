@@ -41,20 +41,19 @@
     justify-content: center;
     transition: .3s;
 
-    &:hover, &:focus, &:active {
-      background-color: $lightTextColor;
-
-      .footer__up-img .stroke {
-        stroke: $lightColor;
-      }
-    }
-
-
     &:visited {
       background-color: $lightBgColor;
 
       .footer__up-img .stroke {
         stroke: $darkColor;
+      }
+    }
+
+    &:hover, &:focus, &:active {
+      background-color: $lightTextColor;
+
+      .footer__up-img .stroke {
+        stroke: $lightColor;
       }
     }
   }
@@ -93,12 +92,12 @@
     display: block;
     cursor: pointer;
 
-    &:hover, &:focus, &:active {
-      color: $lightColor;
-    }
-
     &:visited {
       color: $darkColor;
+    }
+
+    &:hover, &:focus, &:active {
+      color: $lightColor;
     }
   }
 
@@ -125,8 +124,24 @@
       max-width: 50%;
     }
 
+    &__up {
+      right: 20px;
+    }
+
     &__content {
       max-width: 50%;
+    }
+
+    &__copyright {
+      line-height: 16px;
+
+      &:nth-of-type(2) {
+        margin-bottom: 12px;
+      }
+
+      &:last-of-type {
+        padding: 0 10px 17px 10px;
+      }
     }
   }
 }
@@ -134,15 +149,62 @@
 // max 575.9px
 @media screen and (max-width: $xs) {
   .footer {
+    &__content-block {
+      padding: 18px 0 0 0;
+      margin-bottom: 11px;
+    }
+
+    &__up {
+      width: 36px;
+      height: 36px;
+    }
+
+    &__up-img {
+      width: 13px;
+    }
+
     &__logo-block {
       max-width: 100%;
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 13px;
+      padding-left: 0;
+    }
+
+    &__logo {
+      font-size: 22px;
+      line-height: 29px;
     }
 
     &__content {
       max-width: 100%;
       text-align: center;
+      padding-left: 0;
+    }
+
+    &__content-item {
+      font-size: 16px;
+      line-height: 36px;
+    }
+
+    &__copyright {
+      line-height: 40px;
+
+      &:nth-of-type(2) {
+        margin-bottom: 0;
+      }
+
+      &:last-of-type {
+        line-height: 16px;
+      }
+    }
+  }
+}
+
+// max 359.9px
+@media screen and (max-width: $xxs) {
+  .footer {
+    &__copyright:last-of-type {
+      padding: 0 0 17px 0;
     }
   }
 }

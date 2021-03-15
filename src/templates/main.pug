@@ -1,26 +1,52 @@
 - const mainContent = LANG.main;
+- const navContent = LANG.nav;
 
 main#pageTop
     section.main
         .container
             .main__logo-wrap
                 a(href=mainContent.logo_path).main__logo= mainContent.logo
+                .nav__burger
+                    span.nav__burger-line
             .main__content-block
-                block nav
-                    include nav.pug
+                .nav
+                    a(href=navContent.item1_path).nav__item= navContent.item1
+                    a(href=navContent.item2_path).nav__item= navContent.item2
+                    a(href=navContent.item3_path).nav__item= navContent.item3
+                    a(href=navContent.item4_path).nav__item= navContent.item4
+                    a(href=navContent.item5_path).nav__item= navContent.item5
+                    a(href=navContent.item6_path).nav__item= navContent.item6
                 .main__content
-                    p.main__promotion
-                    p.main__text
-                    .main__timer-block
-                    p.main__text
-                    a(href=mainContent.btn_path).main__button-block
-                        each char in mainContent.btn
-                            span.main__button-text= char
-                        each char in mainContent.btn
-                            span.main__button-text= char
+                    p.main__promotion= mainContent.promotion1
+                    p.main__promotion= mainContent.promotion2
+                    p.main__timer-text= mainContent.timer_text
+                    .countdown#countdown
+                        .countdown-number
+                            span.days.countdown-time= mainContent.remaining_time
+                            span.countdown-text= mainContent.days
+                        .countdown-number
+                            span.hours.countdown-time= mainContent.remaining_time
+                            span.countdown-text= mainContent.hours
+                        .countdown-number
+                            span.minutes.countdown-time= mainContent.remaining_time
+                            span.countdown-text= mainContent.minutes
+                    .main__text-wrapper
+                        p.main__text= mainContent.text
+                        a(href=mainContent.btn_path).main__button-wrapper
+                            .main__button
+                                each char in mainContent.btn
+                                    span.main__button-text= char
+                                each char in mainContent.btn
+                                    span.main__button-text= char
+                            .main__button-arrow
+                                svg(class="main__button-img" width="37" height="20" viewBox="0 0 37 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                    path(class="stroke" d="M-6.10352e-05 10.0267H34.3006M34.3006 10.0267L22.7467 1.00021M34.3006 10.0267L22.7467 18.3311" stroke-width="2.10086")
             .main__central
                 img&attributes(mainContent.img).main__img
                 h1.main__title= mainContent.title
+        .burger-menu
+            each item in navContent.burger
+                a(href=item.nav_path).burger-menu__link= item.nav_link
     block reasons
         include reasons.pug
     block assortment
