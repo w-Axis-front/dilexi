@@ -1,3 +1,97 @@
 /*********** assortment *************/
-.assortment {}
+.assortment {
+  margin-bottom: 120px;
+
+  &__title {
+    margin-bottom: 60px;
+    font-family: $font-family;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 48px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    padding: 0 102px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(590px, 1fr));
+    grid-template-rows: repeat(7, minmax(438px, 1fr));
+    justify-items: center;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-auto-rows: 438px;
+  }
+
+  &__card {
+    padding: 22px;
+    width: 590px;
+    background-color: $pastelBgColor4;
+
+    &:nth-child(2) {
+      background-color: $brightBgColor2;
+    }
+
+    &:nth-child(3) {
+      background-color: $brightBgColor5;
+    }
+
+    &:nth-child(4) {
+      background-color: $brightBgColor1;
+    }
+
+    &:nth-child(5) {
+      background-color: $monochromeBgColor1;
+    }
+
+    &:nth-child(6) {
+      background-color: $brightBgColor6;
+    }
+
+    &:nth-child(7) {
+      background-color: $brightBgColor8;
+    }
+
+    &:nth-child(8) {
+      background-color: $monochromeBgColor3;
+    }
+
+    &:nth-child(9) {
+      background-color: $brightBgColor3;
+    }
+
+    &:nth-child(10) {
+      background-color: $monochromeBgColor2;
+    }
+
+    &:nth-child(11) {
+      background-color: $brightBgColor4;
+    }
+
+    &:nth-child(12) {
+      background-color: $pastelBgColor3;
+    }
+
+    &:nth-child(13) {
+      background-color: $brightBgColor7;
+    }
+
+    &:nth-child(14) {
+      background-color: $pastelBgColor1;
+    }
+
+    &:nth-child(15) {
+      background-color: $pastelBgColor2;
+    }
+  }
+
+  &__card-title {
+    color: $lightColor;
+    font-family: $font-family;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 28px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+  }
+}
+
 /********* assortment END ***********/

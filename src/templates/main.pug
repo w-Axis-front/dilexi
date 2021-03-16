@@ -1,5 +1,4 @@
-- const mainContent = LANG.main;
-- const navContent = LANG.nav;
+- const mainContent = LANG.main
 
 main#pageTop
     section.main
@@ -9,13 +8,10 @@ main#pageTop
                 .nav__burger
                     span.nav__burger-line
             .main__content-block
-                .nav
-                    a(href=navContent.item1_path).nav__item= navContent.item1
-                    a(href=navContent.item2_path).nav__item= navContent.item2
-                    a(href=navContent.item3_path).nav__item= navContent.item3
-                    a(href=navContent.item4_path).nav__item= navContent.item4
-                    a(href=navContent.item5_path).nav__item= navContent.item5
-                    a(href=navContent.item6_path).nav__item= navContent.item6
+                ul.nav
+                    each item in navContent
+                        li.nav__item
+                            a(href=item.nav_link)= item.nav_path
                 .main__content
                     p.main__promotion= mainContent.promotion1
                     p.main__promotion= mainContent.promotion2
@@ -32,7 +28,7 @@ main#pageTop
                             span.countdown-text= mainContent.minutes
                     .main__text-wrapper
                         p.main__text= mainContent.text
-                        a(href=mainContent.btn_path).main__button-wrapper
+                        a(href=mainContent.btn_path).main__button-wrapper.js_rotated-btn
                             .main__button
                                 each char in mainContent.btn
                                     span.main__button-text= char
@@ -44,9 +40,6 @@ main#pageTop
             .main__central
                 img&attributes(mainContent.img).main__img
                 h1.main__title= mainContent.title
-        .burger-menu
-            each item in navContent.burger
-                a(href=item.nav_path).burger-menu__link= item.nav_link
     block reasons
         include reasons.pug
     block assortment

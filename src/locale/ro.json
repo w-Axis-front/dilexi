@@ -1,38 +1,31 @@
 {
   "locale": "ro",
-  "nav": {
-    "item1": "Блузки Dilexi",
-    "item1_path": "#reasons",
-    "item2": "Ассортимент",
-    "item2_path": "#assortment",
-    "item3": "Акция",
-    "item3_path": "#promotion",
-    "item4_path": "#sizes",
-    "item4": "Размеры",
-    "item5": "Отзывы",
-    "item5_path": "#testimonials",
-    "item6": "Заказать",
-    "item6_path": "#order",
-    "burger": [{
+  "nav": [
+    {
       "nav_path": "Блузки Dilexi",
       "nav_link": "#reasons"
-    }, {
+    },
+    {
       "nav_path": "Ассортимент",
       "nav_link": "#assortment"
-    }, {
+    },
+    {
       "nav_path": "Акция",
       "nav_link": "#promotion"
-    }, {
+    },
+    {
       "nav_path": "Размеры",
       "nav_link": "#sizes"
-    }, {
+    },
+    {
       "nav_path": "Отзывы",
       "nav_link": "#testimonials"
-    }, {
+    },
+    {
       "nav_path": "Заказать",
       "nav_link": "#order"
-    }]
-  },
+    }
+  ],
   "main": {
     "logo_path": "/",
     "logo": "Dilexi",
@@ -50,11 +43,174 @@
       "srcset": "img/main@2x.jpg 2x"
     },
     "title": "Ликвидация склада итальянского бренда Dilexi!",
-    "btn": ["О", "Ф", "О", "Р", "М", "И", "Т", "Ь", "З", "А", "К", "А", "З"],
+    "btn": [
+      "О",
+      "Ф",
+      "О",
+      "Р",
+      "М",
+      "И",
+      "Т",
+      "Ь",
+      "З",
+      "А",
+      "К",
+      "А",
+      "З"
+    ],
     "btn_path": "#order"
   },
-  "reasons": "",
-  "assortment": "",
+  "reasons": {
+    "title": "4 причины заказать блузку Dilexi:",
+    "accordion": [
+      {
+        "title": "Комфортно",
+        "text": "Смесь из хлопка и полиэстера приятна телу, а саму блузку можно носить и летом, и в демисезон."
+      },
+      {
+        "title": "Универсально",
+        "text": "Высокий ворот, рукава “летучая мышь”, однотонный дизайн и свободный крой идеально подойдут под любой тип фигуры."
+      },
+      {
+        "title": "Практично",
+        "text": "Изделию не требуется сложный уход, ткань выдерживает долгую носку и множество стирок, сохраняя при этом цвет и качество."
+      },
+      {
+        "title": "Стильно",
+        "text": "Эта блуза станет отличным дополнением любого образа — кэжуал, романтического, спортивного, минималистичного и др."
+      }
+    ],
+    "img": {
+      "src": "img/reasons.jpg",
+      "alt": "Girl photo",
+      "srcset": "img/reasons.jpg 2x"
+    }
+  },
+  "assortment": {
+    "title": "Выберите ваш любимый цвет",
+    "cards": [
+      {
+        "title": "Нежно-лавандовая Орхидея",
+        "img": {
+          "src": "img/products/pastel/pastel_4.png",
+          "alt": "Pastel blouse",
+          "srcset": "img/products/pastel/pastel_4@2x.png 2x"
+        }
+      },
+      {
+        "title": "Темно-лиловая Пинотаж",
+        "img": {
+          "src": "img/products/bright/bright_2.png",
+          "alt": "Bright blouse",
+          "srcset": "img/products/bright/bright_2@2x.png 2x"
+        }
+      },
+      {
+        "title": "Насыщенно-вишневая Бессея",
+        "img": {
+          "src": "img/products/bright/bright_5.png",
+          "alt": "Bright blouse",
+          "srcset": "img/products/bright/bright_5@2x.png 2x"
+        }
+      },
+      {
+        "title": "Ярко-красная Ориент",
+        "img": {
+          "src": "img/products/bright/bright_1.png",
+          "alt": "Bright blouse",
+          "srcset": "img/products/bright/bright_1@2x.png 2x"
+        }
+      },
+      {
+        "title": "Матово-белая Люпин",
+        "img": {
+          "src": "img/products/monochrome/monochrome_1.png",
+          "alt": "Monochromatic blouse",
+          "srcset": "img/products/monochrome/monochrome_1@2x.png 2x"
+        }
+      },
+      {
+        "title": "Горчично-желтая Мейер",
+        "img": {
+          "src": "img/products/bright/bright_6.png",
+          "alt": "Bright blouse",
+          "srcset": "img/products/bright/bright_6@2x.png 2x"
+        }
+      },
+      {
+        "title": "Зеленовато-оливковая Хедера",
+        "img": {
+          "src": "img/products/bright/bright_8.png",
+          "alt": "Bright blouse",
+          "srcset": "img/products/bright/bright_8@2x.png 2x"
+        }
+      },
+      {
+        "title": "Угольно-черная Коракс",
+        "img": {
+          "src": "img/products/monochrome/monochrome_3.png",
+          "alt": "Monochromatic blouse",
+          "srcset": "img/products/monochrome/monochrome_3@2x.png 2x"
+        }
+      },
+      {
+        "title": "Лазурно-синяя Индиго",
+        "img": {
+          "src": "img/products/bright/bright_3.png",
+          "alt": "Bright blouse",
+          "srcset": "img/products/bright/bright_3@2x.png 2x"
+        }
+      },
+      {
+        "title": "Дымчато-серая Станум",
+        "img": {
+          "src": "img/products/monochrome/monochrome_2.png",
+          "alt": "Monochromatic blouse",
+          "srcset": "img/products/monochrome/monochrome_2@2x.png 2x"
+        }
+      },
+      {
+        "title": "Мятно-зеленая Ментол",
+        "img": {
+          "src": "img/products/bright/bright_4.png",
+          "alt": "Bright blouse",
+          "srcset": "img/products/bright/bright_4@2x.png 2x"
+        }
+      },
+      {
+        "title": "Светло-песочная Миндаль",
+        "img": {
+          "src": "img/products/pastel/pastel_3.png",
+          "alt": "Pastel blouse",
+          "srcset": "img/products/pastel/pastel_3@2x.png 2x"
+        }
+      },
+      {
+        "title": "Матово-синяя Лобелия",
+        "img": {
+          "src": "img/products/bright/bright_7.png",
+          "alt": "Bright blouse",
+          "srcset": "img/products/bright/bright_7@2x.png 2x"
+        }
+      },
+      {
+        "title": "Серо-бежевая Айвори",
+        "img": {
+          "src": "img/products/pastel/pastel_1.png",
+          "alt": "Pastel blouse",
+          "srcset": "img/products/pastel/pastel_1@2x.png 2x"
+        }
+      },
+      {
+        "title": "Бледно-голубая Феба",
+        "img": {
+          "src": "img/products/pastel/pastel_2.png",
+          "alt": "Pastel blouse",
+          "srcset": "img/products/pastel/pastel_2@2x.png 2x"
+        }
+      }
+    ]
+  },
   "promotion": "",
   "sizes": "",
   "testimonials": "",

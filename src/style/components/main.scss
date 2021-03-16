@@ -76,6 +76,30 @@
     flex-wrap: wrap;
   }
 
+  .nav {
+    padding-left: 24px;
+    width: 67%;
+    padding-top: 70px;
+
+    &__item {
+      display: block;
+
+      a {
+        font-size: 18px;
+        line-height: 50px;
+        color: $darkColor;
+
+        &:visited {
+          color: $darkColor;
+        }
+
+        &:hover, &:focus, &:active {
+          color: $lightColor;
+        }
+      }
+    }
+  }
+
   &__content {
     width: 33%;
   }
@@ -293,17 +317,17 @@
     svg {
       width: 34px;
       height: auto;
+    }
 
-      .stroke {
-        stroke: $darkColor;
-      }
+    .stroke {
+      stroke: $darkColor;
     }
   }
 
   &__button-wrapper:visited {
     .main {
       &__button {
-        animation: none 0 ease 0 1 normal none running;
+        animation: none 4s infinite linear;
       }
 
       &__button-text {
@@ -343,111 +367,74 @@
 
 // max 991.9px
 @media screen and (max-width: $lg) {
-  .nav {
-    width: 70%;
-
-    &__burger {
-      display: inline-block;
-      position: relative;
-      height: 22px;
-      width: 30px;
-      cursor: pointer;
-      margin-right: 27px;
-    }
-
-    &__burger-line {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: transparent;
-      border-radius: 6px;
-    }
-
-    &__burger-line::before,
-    &__burger-line::after {
-      height: 2px;
-      background: $darkColor;
-      position: absolute;
-      content: '';
-      transition: .3s;
-      border-radius: 6px;
-    }
-
-    &__burger-line::before {
-      top: 10px;
-      width: 100%;
-    }
-
-    &__burger-line::after {
-      top: 18px;
-      width: 80%;
-      right: 0;
-    }
-
-    &__burger--active .nav__burger-line::before {
-      transform: rotate(45deg);
-      top: 10px;
-      width: 80%;
-      right: 0;
-    }
-
-    &__burger--active .nav__burger-line::after {
-      transform: rotate(-45deg);
-      top: 10px;
-    }
-
-    //&__burger:hover {
-    //  .nav__burger-line::before,
-    //  .nav__burger-line::after {
-    //    background: $hover;
-    //  }
-    //}
-
-    &__item {
-      display: none;
-    }
-  }
-
   .main {
     &__logo-wrap {
       padding-left: 20px;
+      z-index: $logoBlock;
     }
 
-    .burger-menu {
-      display: none;
-      padding-top: 28px;
-      background-color: $mainColor;
-      position: absolute;
-      top: 49px;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      //z-index: $nav;
-      text-align: center;
-      flex-direction: column;
-      align-items: center;
-      height: 100%;
+    .nav {
+      width: 70%;
 
-      &__link {
+      &__burger {
         display: inline-block;
-        color: $lightColor;
-        font-weight: bold;
-        font-size: 22px;
-        line-height: 28px;
-        transition: color .3s ease 0s;
-        margin-bottom: 24px;
+        position: relative;
+        height: 22px;
+        width: 30px;
+        cursor: pointer;
+        margin-right: 27px;
+      }
 
-        &:nth-of-type(7) {
-          margin-bottom: 48px;
-        }
+      &__burger-line {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+        border-radius: 6px;
+      }
 
-        &:visited {
-          color: $lightColor;
-        }
+      &__burger-line::before,
+      &__burger-line::after {
+        height: 2px;
+        background: $darkColor;
+        position: absolute;
+        content: '';
+        transition: .3s;
+        border-radius: 6px;
+      }
 
-        //&:hover, &:active {
-        //  color: $hover;
-        //}
+      &__burger-line::before {
+        top: 10px;
+        width: 100%;
+      }
+
+      &__burger-line::after {
+        top: 18px;
+        width: 80%;
+        right: 0;
+      }
+
+      &__burger--active .nav__burger-line::before {
+        transform: rotate(45deg);
+        top: 10px;
+        width: 80%;
+        right: 0;
+      }
+
+      &__burger--active .nav__burger-line::after {
+        transform: rotate(-45deg);
+        top: 10px;
+      }
+
+      //&__burger:hover {
+      //  .nav__burger-line::before,
+      //  .nav__burger-line::after {
+      //    background: $hover;
+      //  }
+      //}
+
+      &__item {
+        display: none;
       }
     }
 
@@ -493,6 +480,46 @@
       line-height: 20px;
       max-width: 95%;
     }
+
+    &__button-wrapper, &__button-wrapper:visited {
+      .main {
+        &__button {
+          animation: rotation 4s infinite linear;
+        }
+
+        &__button-text {
+          color: $lightColor;
+        }
+
+        &__button-arrow {
+          background-color: $btnColor;
+
+          .stroke {
+            stroke: $lightColor;
+          }
+        }
+      }
+    }
+
+    &__button-wrapper:hover, &__button-wrapper:focus, &__button-wrapper:active {
+      .main {
+        &__button {
+          animation: none 4s infinite linear;
+        }
+
+        &__button-text {
+          color: $darkColor;
+        }
+
+        &__button-arrow {
+          background-color: $lightColor;
+
+          .stroke {
+            stroke: $darkColor;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -518,7 +545,6 @@
     }
 
     &__logo-wrap {
-      z-index: $mainTitle;
       position: absolute;
       top: 0;
       left: 0;
@@ -725,6 +751,7 @@
   .nav__burger {
     margin-right: 20px;
   }
+
   .main {
     &__title {
       padding-left: 20px;

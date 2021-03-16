@@ -1,5 +1,4 @@
 - const footerContent = LANG.footer;
-- const nav = LANG.nav;
 
 footer.footer
     .container
@@ -10,13 +9,13 @@ footer.footer
             .footer__logo-block
                 a(href=footerContent.logo_path).footer__logo= footerContent.logo
             .footer__content.footer__content-arrow
-                a(href=nav.item1_path).footer__content-item= nav.item1
-                a(href=nav.item2_path).footer__content-item= nav.item2
-                a(href=nav.item3_path).footer__content-item= nav.item3
+                a(href=navContent[0].nav_link).footer__content-item= navContent[0].nav_path
+                a(href=navContent[1].nav_link).footer__content-item= navContent[1].nav_path
+                a(href=navContent[2].nav_link).footer__content-item= navContent[2].nav_path
             .footer__content
-                a(href=nav.item4_path).footer__content-item= nav.item4
-                a(href=nav.item5_path).footer__content-item= nav.item5
-                a(href=nav.item6_path).footer__content-item= nav.item6
+                a(href=navContent[3].nav_link).footer__content-item= navContent[3].nav_path
+                a(href=navContent[4].nav_link).footer__content-item= navContent[4].nav_path
+                a(href=navContent[5].nav_link).footer__content-item= navContent[5].nav_path
             .footer__content
                 a(href=footerContent.item1_path).footer__content-item= footerContent.item1
                 a(href=footerContent.item2_path).footer__content-item= footerContent.item2
