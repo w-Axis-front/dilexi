@@ -95,7 +95,8 @@
           "src": "img/products/pastel/pastel_4.png",
           "alt": "Pastel blouse",
           "srcset": "img/products/pastel/pastel_4@2x.png 2x"
-        }
+        },
+        "text": "Изысканный светлый оттенок сиреневого отлично подойдет романтичным и чутким натурам."
       },
       {
         "title": "Темно-лиловая Пинотаж",
@@ -103,7 +104,8 @@
           "src": "img/products/bright/bright_2.png",
           "alt": "Bright blouse",
           "srcset": "img/products/bright/bright_2@2x.png 2x"
-        }
+        },
+        "text": "Насыщенный темно-фиолетовый цвет часто выбирают творческие люди, вдохновись им и ты."
       },
       {
         "title": "Насыщенно-вишневая Бессея",
@@ -111,7 +113,8 @@
           "src": "img/products/bright/bright_5.png",
           "alt": "Bright blouse",
           "srcset": "img/products/bright/bright_5@2x.png 2x"
-        }
+        },
+        "text": "Темная вишня легко сочетается с другими оттенками и придает внешности благородные нотки."
       },
       {
         "title": "Ярко-красная Ориент",
@@ -119,7 +122,8 @@
           "src": "img/products/bright/bright_1.png",
           "alt": "Bright blouse",
           "srcset": "img/products/bright/bright_1@2x.png 2x"
-        }
+        },
+        "text": "Огненный цвет для смелых девушек, которые готовы к повышенному мужскому вниманию."
       },
       {
         "title": "Матово-белая Люпин",
@@ -127,7 +131,8 @@
           "src": "img/products/monochrome/monochrome_1.png",
           "alt": "Monochromatic blouse",
           "srcset": "img/products/monochrome/monochrome_1@2x.png 2x"
-        }
+        },
+        "text": "Универсальный благородный цвет подойдет для любой ситуации, будь то поход в офис или первое свидание."
       },
       {
         "title": "Горчично-желтая Мейер",
@@ -135,7 +140,8 @@
           "src": "img/products/bright/bright_6.png",
           "alt": "Bright blouse",
           "srcset": "img/products/bright/bright_6@2x.png 2x"
-        }
+        },
+        "text": "Оттенки желтого поднимают настроение не только окружающим, но и тем, кто его носит."
       },
       {
         "title": "Зеленовато-оливковая Хедера",
@@ -143,7 +149,8 @@
           "src": "img/products/bright/bright_8.png",
           "alt": "Bright blouse",
           "srcset": "img/products/bright/bright_8@2x.png 2x"
-        }
+        },
+        "text": "Магнетический зеленый цвет станет глотком свежего воздуха в душном мегаполисе."
       },
       {
         "title": "Угольно-черная Коракс",
@@ -151,7 +158,8 @@
           "src": "img/products/monochrome/monochrome_3.png",
           "alt": "Monochromatic blouse",
           "srcset": "img/products/monochrome/monochrome_3@2x.png 2x"
-        }
+        },
+        "text": "Базовый черный не только стройнит и зрительно удлиняет фигуру, но также легко сочетается с любой вещью в гардеробе."
       },
       {
         "title": "Лазурно-синяя Индиго",
@@ -159,7 +167,8 @@
           "src": "img/products/bright/bright_3.png",
           "alt": "Bright blouse",
           "srcset": "img/products/bright/bright_3@2x.png 2x"
-        }
+        },
+        "text": "Холодный кобальтово-синий оттенок идеален для делового образа и отлично придает уверенность в себе."
       },
       {
         "title": "Дымчато-серая Станум",
@@ -167,7 +176,8 @@
           "src": "img/products/monochrome/monochrome_2.png",
           "alt": "Monochromatic blouse",
           "srcset": "img/products/monochrome/monochrome_2@2x.png 2x"
-        }
+        },
+        "text": "Светло-графитовые оттенки сочетают в себе элегантность и загадочность."
       },
       {
         "title": "Мятно-зеленая Ментол",
@@ -175,7 +185,8 @@
           "src": "img/products/bright/bright_4.png",
           "alt": "Bright blouse",
           "srcset": "img/products/bright/bright_4@2x.png 2x"
-        }
+        },
+        "text": "Оттенок лесной нимфы добавит в твою жизнь красок и волшебства."
       },
       {
         "title": "Светло-песочная Миндаль",
@@ -183,7 +194,8 @@
           "src": "img/products/pastel/pastel_3.png",
           "alt": "Pastel blouse",
           "srcset": "img/products/pastel/pastel_3@2x.png 2x"
-        }
+        },
+        "text": "Теплый нежный цвет тонко подчеркнет естественную красоту и не будет перетягивать внимание на себя."
       },
       {
         "title": "Матово-синяя Лобелия",
@@ -191,7 +203,8 @@
           "src": "img/products/bright/bright_7.png",
           "alt": "Bright blouse",
           "srcset": "img/products/bright/bright_7@2x.png 2x"
-        }
+        },
+        "text": "Глубокий синий цвет излучает королевский шик — никто не догадается об истинной цене этой блузки."
       },
       {
         "title": "Серо-бежевая Айвори",
@@ -199,7 +212,8 @@
           "src": "img/products/pastel/pastel_1.png",
           "alt": "Pastel blouse",
           "srcset": "img/products/pastel/pastel_1@2x.png 2x"
-        }
+        },
+        "text": "Пастельный цвет олицетворяет покой и умиротворение, а еще выигрышно смотрится при любом сочетании."
       },
       {
         "title": "Бледно-голубая Феба",
@@ -207,9 +221,31 @@
           "src": "img/products/pastel/pastel_2.png",
           "alt": "Pastel blouse",
           "srcset": "img/products/pastel/pastel_2@2x.png 2x"
-        }
+        },
+        "text": "Чистый и благородный оттенок помогает обрести гармонию и войти в новый день с улыбкой."
       }
-    ]
+    ],
+    "promo_price": "€109",
+    "price": "€23",
+    "sizes_text": "Размер:",
+    "count_text": "Единиц:",
+    "count_number": 1,
+    "size1": "S",
+    "size2": "M",
+    "size3": "L",
+    "size4": "XL",
+    "size5": "XXL",
+    "size6": "XXXL",
+    "size7": "4XL",
+    "size8": "5XL",
+    "size9": "6XL",
+    "btn": "Купить",
+    "btn_img": {
+      "src": "img/svg/bag.svg",
+      "alt": "Bag"
+    },
+    "link_path": "#order",
+    "link_text": "Перейти к форме заказа"
   },
   "promotion": "",
   "sizes": "",
