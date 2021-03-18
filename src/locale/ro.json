@@ -250,7 +250,35 @@
   "promotion": "",
   "sizes": "",
   "testimonials": "",
-  "order": "",
+  "order": {
+    "title": "Успей заказать модные универсальные блузки по супер цене!",
+    "subtitle": "Ваш заказ:",
+    "number_text": "Количество товара в корзине:",
+    "number": 0,
+    "img": {
+      "src": "img/gift.png",
+      "alt": "Gift",
+      "srcset": "img/gift@2x.png 2x"
+    },
+    "gift_title": "Вы стали  участником акции и получаете блузу В ПОДАРОК!",
+    "gift_text": "Детали уточняйте у оператора.",
+    "table_title1": "Название",
+    "table_title2": "Количество",
+    "table_title3": "Размер",
+    "table_title4": "Цена",
+    "table_size": "размер",
+    "bin_img": {
+      "src": "img/svg/bin.svg",
+      "alt": "Bin"
+    },
+    "total_promo_text": "Стоимость без скидки:",
+    "total": "€0",
+    "total_text": "Общая стоимость заказа:",
+    "name_placeholder": "Ваше имя",
+    "phone_placeholder": "Ваш номер телефона",
+    "button": "Заказать",
+    "empty_cart_err": "Пожалуйста, добавьте товар в корзину"
+  },
   "footer": {
     "up_path": "#pageTop",
     "logo_path": "/",

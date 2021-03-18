@@ -1,3 +1,364 @@
 /*********** ORDER *************/
-.order {}
+.order {
+  padding-top: 150px;
+
+  .container {
+    padding: 0 102px;
+  }
+
+  &__title {
+    font-family: $font-family;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 48px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 48px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: $lightTextColor;
+    margin-bottom: 22px;
+  }
+
+  &__total-number {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 23px;
+
+    span:first-child {
+      margin-right: 18px;
+    }
+
+    span:last-child {
+      font-weight: bold;
+    }
+  }
+
+  &__gift {
+    padding: 20px 20px 13px 131px;
+    background-color: $btnColor;
+    position: relative;
+    margin-bottom: 58px;
+  }
+
+  &__gift-title {
+    font-family: $font-family;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 24px;
+    margin-bottom: 5px;
+  }
+
+  &__gift-text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__gift-img {
+    width: 107px;
+    height: auto;
+    object-fit: contain;
+    position: absolute;
+    left: 6px;
+    top: -23px;
+  }
+
+  &__table-wrapper {
+    margin-bottom: 33px;
+  }
+
+  &__table-title {
+    display: flex;
+    margin-bottom: 13px;
+  }
+
+  &__table-title0 {
+    width: 10%;
+  }
+
+  &__table-title1 {
+    width: 29%;
+  }
+
+  &__table-title2 {
+    width: 20%;
+
+    p {
+      padding-right: 40%;
+      text-align: center;
+    }
+  }
+
+  &__table-title3 {
+    width: 16%;
+    padding-left: 18px;
+    flex-shrink: 0;
+    min-width: 155px;
+  }
+
+  &__table-title4 {
+    width: 15%;
+    padding-left: 20px;
+  }
+
+  &__table-title5 {
+    width: 10%;
+  }
+
+  &__table-row {
+    border-bottom: 1px solid $lightTextTransparentColor;
+    padding-bottom: 26px;
+  }
+
+  &__table-row-first {
+    display: flex;
+    align-items: center;
+    padding-top: 22px;
+    //padding-bottom: 26px;
+  }
+
+  &__table-row-same {
+    display: flex;
+    align-items: center;
+    padding-bottom: 14px;
+    padding-top: 7px;
+  }
+
+  &__table-column1 {
+    width: 10%;
+  }
+
+  &__table-add-icon {
+    background-color: $lightTransparentColor;
+    height: 13.5px;
+    position: relative;
+    width: 2px;
+
+    &:after {
+      background-color: $lightTransparentColor;
+      content: "";
+      height: 2px;
+      left: -6px;
+      position: absolute;
+      top: 6px;
+      width: 13.5px;
+    }
+  }
+
+  &__table-add-btn {
+    width: 46px;
+    height: 46px;
+    background-color: $lightTransparentColor;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $lightTextColor;
+
+      .order__table-add-icon {
+        background-color: $lightColor;
+
+        &:after {
+          background-color: $lightColor;
+        }
+      }
+    }
+  }
+
+  &__table-column2 {
+    width: 29%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__table-product-img {
+    display: inline-block;
+    margin-right: 33px;
+    height: 71px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  &__table-product-title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+  }
+
+  &__table-column3 {
+    width: 20%;
+    font-size: 18px;
+    line-height: 20px;
+
+    p {
+      padding-right: 40%;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+
+  &__table-column4 {
+    width: 16%;
+    flex-shrink: 0;
+    min-width: 155px;
+    position: relative;
+  }
+
+  &__table-column4-content {
+    z-index: $cartText;
+  }
+
+  &__table-product-size {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    margin-right: 7px;
+  }
+
+  &__table-arrow-down-img {
+    object-fit: contain;
+    cursor: pointer;
+
+    .stroke {
+      stroke: $darkColor;
+    }
+
+    &:hover {
+      .stroke {
+        stroke: $mainColor;
+      }
+    }
+  }
+
+  &__table-product-sizes-wrapper {
+    position: absolute;
+    width: 155px;
+    padding: 25px 0 7px 8px;
+    top: 0;
+    z-index: -1;
+    left: -7px;
+    border: 1px solid $errorColor;
+    background-color: $lightBgColor;
+  }
+
+  &__table-column5 {
+    width: 15%;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    padding-left: 24px;
+  }
+
+  &__table-column6 {
+    width: 10%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__table-bin-btn {
+    width: 46px;
+    height: 46px;
+    background-color: $lightTransparentColor;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__table-bin-img {
+    display: inline-block;
+    object-fit: contain;
+    height: 23px;
+    width: auto;
+    opacity: .2;
+  }
+
+  &__total-promo {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+    color: $lightTextColor;
+    margin-bottom: 9px;
+
+    span:first-child {
+      margin-right: 18px;
+    }
+
+    span:last-child {
+      font-weight: bold;
+      color: $lightTextColor;
+      opacity: .5;
+    }
+  }
+
+  &__total {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 18px;
+
+    span:first-child {
+      margin-right: 18px;
+    }
+
+    span:last-child {
+      font-weight: bold;
+    }
+  }
+
+  &__empty-cart-err-wrapper {
+    min-height: 24px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+    color: $errorColor;
+    margin-bottom: 30px;
+
+    p {
+      display: none;
+    }
+  }
+
+  &__form {
+    display: flex;
+    margin-bottom: 110px;
+  }
+
+  &__input-name {
+    margin-right: 20px;
+    min-width: 285px;
+  }
+
+  &__input-phone {
+    margin-right: 20px;
+    min-width: 285px;
+  }
+
+  &__form-btn {
+    max-width: 207px;
+
+    &:hover, &:focus, &:active, &:focus-visible {
+      background-color: $mainColor;
+    }
+  }
+}
+
+// max 991.9px
+@media screen and (max-width: $lg) {
+  .order {
+    padding: 0;
+  }
+}
+
 /********* ORDER END ***********/

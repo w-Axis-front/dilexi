@@ -24,7 +24,7 @@ export default function updateStore() {
         const state = store.getState();
         // console.log("state.cart", state.cart);
         // cart.textContent = state.cart;
-        // [addBtn, subBtn].forEach(btn => {
+        // [addBtn, subBtmentn].forEach(btn => {
         //     btn.disabled = state.data.disabled;
         // })
     });
