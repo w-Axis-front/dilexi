@@ -1,6 +1,24 @@
 export default function animateContent() {
     const rotatedBtns = document.querySelectorAll(".js_rotated-btn");
-    const accordion = document.getElementById("js_accordion")
+    const accordion = document.getElementById("js_accordion");
+
+    function enterHandler(rotatedBtnPart, btnText, btnStaticPart, btnStaticPartSVG) {
+        rotatedBtnPart.css({"animation": "none 0s infinite linear"});
+        btnText.css({"color": "#000000"});
+        btnStaticPartSVG.css({"stroke": "#000000"});
+        btnStaticPart.css({"background-color": "#FFFFFF"});
+    }
+
+    function leaveHandler(rotatedBtnPart, btnText, btnStaticPart, btnStaticPartSVG, btn) {
+        rotatedBtnPart.css({"animation": "rotation 10s infinite linear"});
+        btnText.css({"color": "#FFFFFF"});
+        if (btn.classList.contains("order__gift-button-wrapper")) {
+            btnStaticPart.css({"background-color": "#ffb951"});
+        } else {
+            btnStaticPart.css({"background-color": "#FFDD67"});
+        }
+        btnStaticPartSVG.css({"stroke": "#FFFFFF"});
+    }
 
     function rotateBtns(e) {
         if (e.matches) {
@@ -12,37 +30,22 @@ export default function animateContent() {
                     const btnStaticPart = rotatedBtn.find(".main__button-arrow");
                     const btnStaticPartSVG = rotatedBtn.find(".stroke");
 
-                    rotatedBtn.on('touchstart', function (event) {
+                    rotatedBtn.on('touchstart', function () {
                         // event.preventDefault();
-                        rotatedBtnPart.css({"animation": "none 4s infinite linear"});
-                        btnText.css({"color": "#000000"});
-                        btnStaticPart.css({"background-color": "#FFFFFF"});
-                        btnStaticPartSVG.css({"stroke": "#000000"});
+                        enterHandler(rotatedBtnPart, btnText, btnStaticPart, btnStaticPartSVG);
                     });
 
                     rotatedBtn.on('touchend', function () {
-                        rotatedBtnPart.css({"animation": "rotation 4s infinite linear"});
-                        btnText.css({"color": "#FFFFFF"});
-                        btnStaticPart.css({"background-color": "#FFDD67"});
-                        btnStaticPartSVG.css({"stroke": "#FFFFFF"});
+                        leaveHandler(rotatedBtnPart, btnText, btnStaticPart, btnStaticPartSVG, rotatedBtns[i]);
                     });
 
-                    // rotatedBtn.click(function() {
-                    //     const _this = $(this);
                     rotatedBtn.mouseenter(function () {
-                        rotatedBtnPart.css({"animation": "none 4s infinite linear"});
-                        btnText.css({"color": "#000000"});
-                        btnStaticPart.css({"background-color": "#FFFFFF"});
-                        btnStaticPartSVG.css({"stroke": "#000000"});
+                        enterHandler(rotatedBtnPart, btnText, btnStaticPart, btnStaticPartSVG);
                     });
 
                     rotatedBtn.mouseleave(function () {
-                        rotatedBtnPart.css({"animation": "rotation 4s infinite linear"});
-                        btnText.css({"color": "#FFFFFF"});
-                        btnStaticPart.css({"background-color": "#FFDD67"});
-                        btnStaticPartSVG.css({"stroke": "#FFFFFF"});
+                        leaveHandler(rotatedBtnPart, btnText, btnStaticPart, btnStaticPartSVG, rotatedBtns[i]);
                     });
-                    // });
                 }
             }
         }
@@ -60,7 +63,7 @@ export default function animateContent() {
             }
         }
         let itemIndex = 1;
-        const interval = setInterval(function() {
+        const interval = setInterval(function () {
             if (accItems[itemIndex].style.display !== "block") {
                 for (let i = 0; i < accItems.length; i++) {
                     $(accItems[i]).slideUp();
@@ -94,7 +97,7 @@ export default function animateContent() {
         $(document).on('page:beforeout', function () {
             clearInterval(interval);
         });
-        $(window).on('unload', function(){
+        $(window).on('unload', function () {
             clearInterval(interval);
         });
     }

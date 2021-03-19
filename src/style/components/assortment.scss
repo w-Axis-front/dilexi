@@ -368,4 +368,10 @@
   }
 }
 
+// max 991.9px
+@media screen and (max-width: $lg) {
+  .assortment {
+    display: none;
+  }
+}
 /********* assortment END ***********/

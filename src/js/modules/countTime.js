@@ -7,15 +7,16 @@ export default function countTime() {
     // const daysSpan = clock.querySelector('.days');
     const hoursSpan = clock.querySelector('.hours');
     const minutesSpan = clock.querySelector('.minutes');
+
     // const secondsSpan = clock.querySelector('.seconds');
 
     function getTimeRemaining(endtime) {
         let t;
         if (!endtime.total) {
             t = Date.parse(endtime) - Date.parse(new Date());
-        } else {   
+        } else {
             t = endtime.total - 1000;
-        }        
+        }
 
         const seconds = Math.floor((t / 1000) % 60);
         const minutes = Math.floor((t / 1000 / 60) % 60);
@@ -32,6 +33,7 @@ export default function countTime() {
         return remindedTimeObg;
     }
 
+    const INTERVAL = 1000; // ms
     function initializeClock() {
         let remindedTime;
         if (localStorage && localStorage.getItem("remindedTimeDilexi")) {
@@ -39,19 +41,28 @@ export default function countTime() {
         } else {
             remindedTime = DEADLINE;
         }
-            const t = getTimeRemaining(remindedTime);
-            store.dispatch(updateTime(t));
+        const t = getTimeRemaining(remindedTime);
+        store.dispatch(updateTime(t));
 
-        function updateClock() {
+        let expected = Date.now() + INTERVAL;
+        setTimeout(step, INTERVAL);
+
+        function step() {
+            const dt = Date.now() - expected; // the drift (positive for overshooting)
+            if (dt > INTERVAL) {
+                console.log('overshooting')
+                // something really bad happened. Maybe the browser (tab) was inactive?
+                // possibly special handling to avoid futile "catch up" run
+            }
             const state = store.getState();
             const t = getTimeRemaining(state.time);
-            store.dispatch(updateTime(t));
-            if (t.total <= 999) {
-                clearInterval(timeInterval);
+
+            if (t.total > 999) {
+                store.dispatch(updateTime(t));
+                expected += INTERVAL;
+                setTimeout(step, Math.max(0, INTERVAL - dt)); // take into account drift
             }
         }
-
-        const timeInterval = setInterval(updateClock, 1000);
     }
 
     initializeClock();

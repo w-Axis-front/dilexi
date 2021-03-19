@@ -1,6 +1,8 @@
 # Dilexi
-Копирайт: https://docs.google.com/document/d/1dSi8egGhgkw7LqARrNaisOxSvHmYeXJH8ksNFvWomyI/edit?usp=sharing
-Макет: https://www.figma.com/file/uoAiwypmZmtDWk0U253ak9/Dilexi?node-id=1%3A2
+Копирайт: 
+https://docs.google.com/document/d/1dSi8egGhgkw7LqARrNaisOxSvHmYeXJH8ksNFvWomyI/edit?usp=sharing
+Макет: 
+https://www.figma.com/file/uoAiwypmZmtDWk0U253ak9/Dilexi?node-id=1%3A2
 ---
 
 Навигация
