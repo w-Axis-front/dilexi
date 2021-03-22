@@ -88,9 +88,13 @@
   },
   "assortment": {
     "title": "Выберите ваш любимый цвет",
+    "sub_title1": "Яркие",
+    "sub_title2": "Пастель",
+    "sub_title3": "Монохром",
     "cards": [
       {
         "title": "Нежно-лавандовая Орхидея",
+        "id": 11,
         "img": {
           "src": "img/products/pastel/pastel_4.png",
           "alt": "Pastel blouse",
@@ -100,6 +104,7 @@
       },
       {
         "title": "Темно-лиловая Пинотаж",
+        "id": 1,
         "img": {
           "src": "img/products/bright/bright_2.png",
           "alt": "Bright blouse",
@@ -109,6 +114,7 @@
       },
       {
         "title": "Насыщенно-вишневая Бессея",
+        "id": 4,
         "img": {
           "src": "img/products/bright/bright_5.png",
           "alt": "Bright blouse",
@@ -118,6 +124,7 @@
       },
       {
         "title": "Ярко-красная Ориент",
+        "id": 0,
         "img": {
           "src": "img/products/bright/bright_1.png",
           "alt": "Bright blouse",
@@ -127,6 +134,7 @@
       },
       {
         "title": "Матово-белая Люпин",
+        "id": 12,
         "img": {
           "src": "img/products/monochrome/monochrome_1.png",
           "alt": "Monochromatic blouse",
@@ -136,6 +144,7 @@
       },
       {
         "title": "Горчично-желтая Мейер",
+        "id": 5,
         "img": {
           "src": "img/products/bright/bright_6.png",
           "alt": "Bright blouse",
@@ -145,6 +154,7 @@
       },
       {
         "title": "Зеленовато-оливковая Хедера",
+        "id": 7,
         "img": {
           "src": "img/products/bright/bright_8.png",
           "alt": "Bright blouse",
@@ -154,6 +164,7 @@
       },
       {
         "title": "Угольно-черная Коракс",
+        "id": 14,
         "img": {
           "src": "img/products/monochrome/monochrome_3.png",
           "alt": "Monochromatic blouse",
@@ -163,6 +174,7 @@
       },
       {
         "title": "Лазурно-синяя Индиго",
+        "id": 2,
         "img": {
           "src": "img/products/bright/bright_3.png",
           "alt": "Bright blouse",
@@ -172,6 +184,7 @@
       },
       {
         "title": "Дымчато-серая Станум",
+        "id": 13,
         "img": {
           "src": "img/products/monochrome/monochrome_2.png",
           "alt": "Monochromatic blouse",
@@ -181,6 +194,7 @@
       },
       {
         "title": "Мятно-зеленая Ментол",
+        "id": 3,
         "img": {
           "src": "img/products/bright/bright_4.png",
           "alt": "Bright blouse",
@@ -190,6 +204,7 @@
       },
       {
         "title": "Светло-песочная Миндаль",
+        "id": 10,
         "img": {
           "src": "img/products/pastel/pastel_3.png",
           "alt": "Pastel blouse",
@@ -199,6 +214,7 @@
       },
       {
         "title": "Матово-синяя Лобелия",
+        "id": 6,
         "img": {
           "src": "img/products/bright/bright_7.png",
           "alt": "Bright blouse",
@@ -208,6 +224,7 @@
       },
       {
         "title": "Серо-бежевая Айвори",
+        "id": 8,
         "img": {
           "src": "img/products/pastel/pastel_1.png",
           "alt": "Pastel blouse",
@@ -217,6 +234,7 @@
       },
       {
         "title": "Бледно-голубая Феба",
+        "id": 9,
         "img": {
           "src": "img/products/pastel/pastel_2.png",
           "alt": "Pastel blouse",

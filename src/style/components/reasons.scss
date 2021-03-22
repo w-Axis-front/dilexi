@@ -64,6 +64,7 @@
 // max 991.9px
 @media screen and (max-width: $lg) {
   .reasons {
+    margin-bottom: 45px;
     .container {
       padding: 0;
     }
@@ -87,7 +88,6 @@
 @media screen and (max-width: $md) {
   .reasons {
     padding-top: 0;
-    margin-bottom: 45px;
 
     &__content-wrapper {
       padding: 0;
