@@ -1,4 +1,3 @@
-export const UPDATE_TIME = "UPDATE_TIME";
 //order types
 export const SET_PRICES = "SET_PRICES";
 export const ADD_ITEM = "ADD_ITEM";

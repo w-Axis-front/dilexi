@@ -1,3 +1,21 @@
 - const promotionContent = LANG.promotion;
 
 section.promotion#promotion
+    .container
+        .promotion__content-wrapper
+            .promotion__content
+                h3.promotion__title= promotionContent.title
+                p.promotion__terms= promotionContent.terms
+                p.promotion__subtitle= promotionContent.subtitle
+                p.promotion__note= promotionContent.note
+            .promotion__img-wrapper
+                img&attributes(promotionContent.img).promotion__img
+                a(href=mainContent.btn_path).main__button-wrapper.js_rotated-btn.promotion__button-wrapper
+                    .main__button
+                        each char in mainContent.btn
+                            span.main__button-text= char
+                        each char in mainContent.btn
+                            span.main__button-text= char
+                    .main__button-arrow
+                        svg(class="main__button-img" width="37" height="20" viewBox="0 0 37 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            path(class="stroke" d="M-6.10352e-05 10.0267H34.3006M34.3006 10.0267L22.7467 1.00021M34.3006 10.0267L22.7467 18.3311" stroke-width="2.10086")

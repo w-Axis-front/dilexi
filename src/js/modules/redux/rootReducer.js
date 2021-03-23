@@ -1,6 +1,5 @@
 import { combineReducers } from "redux";
 import {
-	UPDATE_TIME,
 	SET_PRICES,
 	ADD_ITEM,
 	INCREMENT_ITEM,
@@ -13,15 +12,6 @@ const initialCartState = {
 	price: 0,
 	oldPrice: 0
 };
-
-function timeReducer(state = null, action) {
-	switch (action.type) {
-		case UPDATE_TIME:
-			return action.payload;
-		default:
-			return state;
-	}
-}
 
 function cartReducer(state = initialCartState, action) {
 	switch (action.type) {
@@ -86,6 +76,5 @@ function cartReducer(state = initialCartState, action) {
 }
 
 export const rootReducer = combineReducers({
-	cart: cartReducer,
-	time: timeReducer
+	cart: cartReducer
 });

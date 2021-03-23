@@ -60,6 +60,7 @@
   "dependencies": {
     "object-fit-images": "^3.2.4",
     "redux": "^4.0.5",
-    "underscore": "^1.12.1"
+    "underscore": "^1.12.1",
+    "slick-carousel": "^1.8.1"
   }
 }

@@ -1,21 +1,18 @@
-import {store} from '../main';
-import {updateTime} from "./redux/actions";
-
 export default function countTime() {
     const DEADLINE = new Date(Date.parse(new Date()) + 6 * 60 * 60 * 1000);
     const clock = document.getElementById("countdown");
     // const daysSpan = clock.querySelector('.days');
     const hoursSpan = clock.querySelector('.hours');
     const minutesSpan = clock.querySelector('.minutes');
-
     // const secondsSpan = clock.querySelector('.seconds');
+    const INTERVAL = 1000; // ms
 
     function getTimeRemaining(endtime) {
         let t;
         if (!endtime.total) {
             t = Date.parse(endtime) - Date.parse(new Date());
         } else {
-            t = endtime.total - 1000;
+            t = endtime.total - INTERVAL;
         }
 
         const seconds = Math.floor((t / 1000) % 60);
@@ -30,10 +27,28 @@ export default function countTime() {
             'seconds': seconds
         }
         localStorage.setItem("remindedTimeDilexi", JSON.stringify(remindedTimeObg));
+        if (remindedTimeObg.total > 999) {
+            // daysSpan.innerHTML = remindedTimeObg.days;
+            if (remindedTimeObg.hours) {
+                hoursSpan.innerHTML = ('0' + remindedTimeObg.hours).slice(-2);
+            } else {
+                hoursSpan.innerHTML = '00';
+            }
+            if (remindedTimeObg.minutes) {
+                minutesSpan.innerHTML = ('0' + remindedTimeObg.minutes).slice(-2);
+            } else {
+                minutesSpan.innerHTML = '00';
+            }
+            // secondsSpan.innerHTML = ('0' + remindedTimeObg.seconds).slice(-2);
+        } else {
+            // daysSpan.innerHTML = '00';
+            hoursSpan.innerHTML = '00';
+            minutesSpan.innerHTML = '00';
+            // secondsSpan.innerHTML = '00';
+        }
         return remindedTimeObg;
     }
 
-    const INTERVAL = 1000; // ms
     function initializeClock() {
         let remindedTime;
         if (localStorage && localStorage.getItem("remindedTimeDilexi")) {
@@ -41,24 +56,19 @@ export default function countTime() {
         } else {
             remindedTime = DEADLINE;
         }
-        const t = getTimeRemaining(remindedTime);
-        store.dispatch(updateTime(t));
-
+        let t = getTimeRemaining(remindedTime);
         let expected = Date.now() + INTERVAL;
         setTimeout(step, INTERVAL);
 
         function step() {
             const dt = Date.now() - expected; // the drift (positive for overshooting)
             if (dt > INTERVAL) {
-                console.log('overshooting')
+                console.log('overshooting');
                 // something really bad happened. Maybe the browser (tab) was inactive?
                 // possibly special handling to avoid futile "catch up" run
             }
-            const state = store.getState();
-            const t = getTimeRemaining(state.time);
-
+            t = getTimeRemaining(t);
             if (t.total > 999) {
-                store.dispatch(updateTime(t));
                 expected += INTERVAL;
                 setTimeout(step, Math.max(0, INTERVAL - dt)); // take into account drift
             }
@@ -66,12 +76,4 @@ export default function countTime() {
     }
 
     initializeClock();
-
-    store.subscribe(() => {
-        const state = store.getState();
-        // daysSpan.innerHTML = state.time.days;
-        hoursSpan.innerHTML = ('0' + state.time.hours).slice(-2);
-        minutesSpan.innerHTML = ('0' + state.time.minutes).slice(-2);
-        // secondsSpan.innerHTML = ('0' + state.time.seconds).slice(-2);
-    });
 }

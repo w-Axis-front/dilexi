@@ -1,5 +1,4 @@
 import {
-	UPDATE_TIME,
 	SET_PRICES,
 	ADD_ITEM,
 	INCREMENT_ITEM,
@@ -39,12 +38,5 @@ export function removeItem(chosenProduct) {
 	return {
 		type: DELETE_ITEM,
 		payload: chosenProduct
-	};
-}
-
-export function updateTime(time) {
-	return {
-		type: UPDATE_TIME,
-		payload: time
 	};
 }
