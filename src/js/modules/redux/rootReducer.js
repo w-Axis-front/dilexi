@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import {BUY, UPDATE_TIME} from './types';
+import {BUY} from './types';
 
 function buyProducts(chosenProduct, chosenProducts) {
     return [...chosenProducts, chosenProduct];
@@ -10,14 +10,6 @@ const initialCartState = {
     total: 0,
     promoTotal: 0
 };
-
-function timeReducer(state = null, action) {
-    switch (action.type) {
-        case UPDATE_TIME:
-            return action.payload;
-        default: return state
-    }
-}
 
 function cartReducer(state = initialCartState, action) {
     switch (action.type) {
@@ -33,6 +25,5 @@ function cartReducer(state = initialCartState, action) {
 }
 
 export const rootReducer = combineReducers({
-    cart: cartReducer,
-    time: timeReducer
+    cart: cartReducer
 });
