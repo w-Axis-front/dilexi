@@ -1,6 +1,6 @@
 /*********** assortment *************/
 .assortment {
-  margin-bottom: 120px;
+  margin-bottom: 118px;
 
   &__title {
     margin-bottom: 60px;
@@ -32,61 +32,68 @@
     color: $lightColor;
     background-color: $pastelBgColor4;
     overflow: hidden;
+    border: 2px solid transparent;
 
-    &:nth-child(2) {
-      background-color: $brightBgColor2;
-    }
+    &.assortment {
+      &__card-bright1 {
+        background-color: $brightBgColor1;
+      }
 
-    &:nth-child(3) {
-      background-color: $brightBgColor5;
-    }
+      &__card-bright2 {
+        background-color: $brightBgColor2;
+      }
 
-    &:nth-child(4) {
-      background-color: $brightBgColor1;
-    }
+      &__card-bright3 {
+        background-color: $brightBgColor3;
+      }
 
-    &:nth-child(5) {
-      background-color: $monochromeBgColor1;
-    }
+      &__card-bright4 {
+        background-color: $brightBgColor4;
+      }
 
-    &:nth-child(6) {
-      background-color: $brightBgColor6;
-    }
+      &__card-bright5 {
+        background-color: $brightBgColor5;
+      }
 
-    &:nth-child(7) {
-      background-color: $brightBgColor8;
-    }
+      &__card-bright6 {
+        background-color: $brightBgColor6;
+      }
 
-    &:nth-child(8) {
-      background-color: $monochromeBgColor3;
-    }
+      &__card-bright7 {
+        background-color: $brightBgColor7;
+      }
 
-    &:nth-child(9) {
-      background-color: $brightBgColor3;
-    }
+      &__card-bright8 {
+        background-color: $brightBgColor8;
+      }
 
-    &:nth-child(10) {
-      background-color: $monochromeBgColor2;
-    }
+      &__card-pastel1 {
+        background-color: $pastelBgColor1;
+      }
 
-    &:nth-child(11) {
-      background-color: $brightBgColor4;
-    }
+      &__card-pastel2 {
+        background-color: $pastelBgColor2;
+      }
 
-    &:nth-child(12) {
-      background-color: $pastelBgColor3;
-    }
+      &__card-pastel3 {
+        background-color: $pastelBgColor3;
+      }
 
-    &:nth-child(13) {
-      background-color: $brightBgColor7;
-    }
+      &__card-pastel4 {
+        background-color: $pastelBgColor4;
+      }
 
-    &:nth-child(14) {
-      background-color: $pastelBgColor1;
-    }
+      &__card-monochrome1 {
+        background-color: $monochromeBgColor1;
+      }
 
-    &:nth-child(15) {
-      background-color: $pastelBgColor2;
+      &__card-monochrome2 {
+        background-color: $monochromeBgColor2;
+      }
+
+      &__card-monochrome3 {
+        background-color: $monochromeBgColor3;
+      }
     }
   }
 
@@ -198,13 +205,13 @@
     span {
       display: inline-block;
       padding: 0 6px;
-      cursor: pointer;
       text-align: center;
 
       &.assortment__card-count-subtract {
         min-width: 16px;
         padding: 0 2.5px;
         font-size: 19px;
+        cursor: pointer;
       }
 
       &.assortment__card-count-number {
@@ -216,6 +223,7 @@
       &.assortment__card-count-add {
         min-width: 16px;
         padding: 0 4px;
+        cursor: pointer;
       }
     }
   }
@@ -349,7 +357,7 @@
       }
     }
 
-    &:hover,  &:active {
+    &:hover, &:active {
       color: $lightColor;
 
       .assortment__card-link-text {
@@ -375,7 +383,7 @@
 // max 991.9px
 @media screen and (max-width: $lg) {
   .assortment {
-    margin-bottom: 60px;
+    margin-bottom: 88px;
 
     &__title {
       padding: 0 20px;
@@ -390,12 +398,22 @@
       font-feature-settings: 'pnum' on, 'lnum' on;
       color: $lightTextColor;
       margin-bottom: 9px;
+      padding: 0 20px;
     }
 
     .container {
       display: none;
+
       &.assortment__container-mobile {
         display: block;
+
+        &:nth-child(3) {
+          padding-top: 49px;
+        }
+
+        &:nth-child(5) {
+          padding-top: 49px;
+        }
       }
     }
 
@@ -410,45 +428,11 @@
     &__card {
       padding: 10px 21px 0 19px;
       width: 100%;
-
-      &:nth-of-type(2) {
-        background-color: $brightBgColor1;
-      }
-
-      &:nth-of-type(3) {
-        background-color: $brightBgColor2;
-      }
-
-      &:nth-of-type(4) {
-        background-color: $brightBgColor3;
-      }
-
-      &:nth-of-type(5) {
-        background-color: $brightBgColor4;
-      }
-
-      &:nth-of-type(6) {
-        background-color: $brightBgColor5;
-      }
-
-      &:nth-of-type(7) {
-        background-color: $brightBgColor6;
-      }
-
-      &:nth-of-type(8) {
-        background-color: $brightBgColor7;
-      }
-
-      &:nth-of-type(9) {
-        background-color: $brightBgColor8;
-      }
     }
 
     &__card-content {
       max-width: none;
-    //  display: flex;
-    //  flex-direction: column;
-    //  justify-content: space-between;
+      display: block;
       height: auto;
     }
 
@@ -471,196 +455,91 @@
       margin-right: 38px;
     }
 
-    //.al-cost-promo {
-    //  display: inline-block;
-    //  font-weight: 500;
-    //  font-size: 18px;
-    //  line-height: 21px;
-    //  font-feature-settings: 'pnum' on, 'lnum' on;
-    //  color: $darkColor;
-    //  opacity: 0.2;
-    //  position: relative;
-    //  margin-bottom: 5px;
-    //}
-    //
-    //&__cost-promo-line {
-    //  position: absolute;
-    //  display: inline-block;
-    //  height: 1px;
-    //  width: 100%;
-    //  background-color: $darkTransparentColor;
-    //  transform: rotate(-25deg);
-    //  top: 50%;
-    //  right: 0;
-    //}
-    //
+    .al-cost-promo {
+      font-size: 25px;
+      line-height: 30px;
+      margin-bottom: 7px;
+    }
+
+    &__cost-promo-line {
+      height: 2px;
+    }
+
     &__card-sizes-wrapper {
-    //  display: flex;
       margin-bottom: 11px;
     }
-    //
-    //&__card-sizes-text {
-    //  font-weight: 300;
-    //  font-size: 14px;
-    //  line-height: 23px;
-    //  margin-right: 12px;
-    //}
-    //
+
+    &__card-sizes-text {
+      line-height: 26px;
+      margin-right: 10px;
+    }
+
     &__card-sizes {
       max-width: none;
-    //  display: flex;
-    //  flex-wrap: wrap;
-    //
-    //  span {
-    //    font-size: 14px;
-    //    display: inline-block;
-    //    line-height: 24px;
-    //    cursor: pointer;
-    //    padding: 0 3px;
-    //
-    //    &:hover {
-    //      font-weight: bold;
-    //    }
-    //  }
+
+      span {
+        font-size: 16px;
+        line-height: 28px;
+        padding: 0 6px;
+      }
     }
-    //
-    //&__card-count-wrapper {
-    //  display: flex;
-    //  align-items: center;
-    //  margin-bottom: 16px;
-    //}
-    //
-    //&__card-count-text {
-    //  font-weight: 300;
-    //  font-size: 14px;
-    //  line-height: 26px;
-    //  margin-right: 14px;
-    //}
-    //
-    //&__card-count {
-    //  font-size: 14px;
-    //  line-height: 20px;
-    //  display: flex;
-    //  align-items: center;
-    //  justify-content: center;
-    //  height: 20px;
-    //  background: $lightBgColor1;
-    //  border-radius: 2px;
-    //  text-align: center;
-    //  color: $darkColor;
-    //  vertical-align: middle;
-    //
-    //  span {
-    //    display: inline-block;
-    //    padding: 0 6px;
-    //    cursor: pointer;
-    //    text-align: center;
-    //
-    //    &.assortment__card-count-subtract {
-    //      min-width: 16px;
-    //      padding: 0 2.5px;
-    //      font-size: 19px;
-    //    }
-    //
-    //    &.assortment__card-count-number {
-    //      border-radius: 2px;
-    //      background-color: $lightColor;
-    //      min-width: 20px;
-    //    }
-    //
-    //    &.assortment__card-count-add {
-    //      min-width: 16px;
-    //      padding: 0 4px;
-    //    }
-    //  }
-    //}
-    //
+
+    &__card-count-wrapper {
+      margin-bottom: 20px;
+    }
+
+    &__card-count-text {
+      margin-right: 10px;
+    }
+
+    &__card-count {
+      font-size: 20px;
+      line-height: 28px;
+      height: 28px;
+      border-radius: 3px;
+
+      span {
+        padding: 0 9px;
+        text-align: center;
+
+        &.assortment__card-count-subtract {
+          min-width: 32px;
+          padding: 0;
+          font-size: 28px;
+        }
+
+        &.assortment__card-count-number {
+          border-radius: 3px;
+          min-width: 31px;
+        }
+
+        &.assortment__card-count-add {
+          min-width: 32px;
+          padding: 0;
+        }
+      }
+    }
+
     .al-cost {
-    //  font-weight: 900;
-    //  font-size: 38px;
-    //  line-height: 45px;
-    //  font-feature-settings: 'pnum' on, 'lnum' on;
+      font-weight: 900;
+      font-size: 44px;
+      line-height: 52px;
       margin-bottom: 0;
     }
-    
+
     &__card-footer {
       justify-content: space-between;
       margin-bottom: 11px;
     }
 
-    //&__card-btn-icon {
-    //  position: absolute;
-    //  top: 2px;
-    //  left: 2px;
-    //  background-color: $lightColor;
-    //  display: flex;
-    //  justify-content: center;
-    //  align-items: center;
-    //  width: 42.5px;
-    //  height: 42.5px;
-    //  border-radius: 50%;
-    //  transition: .3s
-    //}
-    //
-    &__card-btn-img {
-    //  display: inline-block;
-    //  object-fit: contain;
-    //  height: 22px;
-    //  width: auto;
-    }
-    //
-    //.button-action {
-    //  max-width: 160px;
-    //  padding-left: 23px;
-    //  margin-right: 56px;
-    //  display: inline-block;
-    //
-    //  &:visited .assortment__card-btn-icon {
-    //    background-color: $lightColor;
-    //  }
-    //
-    //  &:hover, &:focus, &:active, &:focus-visible {
-    //    .assortment__card-btn-icon {
-    //      background-color: $btnColor;
-    //    }
-    //  }
-    //}
-    //
-    //&__card-bin-btn-img {
-    //  display: inline-block;
-    //  object-fit: contain;
-    //  height: 23px;
-    //  width: auto;
-    //
-    //  .stroke {
-    //    stroke: $darkColor;
-    //    transition: .3s;
-    //  }
-    //}
-    //
-    &__card-bin-btn {
-    //  width: 46px;
-    //  height: 46px;
-    //  border-radius: 50%;
-    //  background-color: $lightColor;
-      display: flex;
-    //  display: none;
-    //  justify-content: center;
-    //  align-items: center;
+    .button-action {
       margin-right: 0;
-    //  cursor: pointer;
-    //  transition: .3s;
-    //
-    //  &:hover {
-    //    border: 2px solid $lightColor;
-    //    background-color: $lightTextColor;
-    //
-    //    .assortment__card-bin-btn-img {
-    //      .stroke {
-    //        stroke: $lightColor;
-    //      }
-    //    }
-    //  }
+    }
+
+    &__card-bin-btn {
+      //display: flex;
+        display: none;
+      margin-right: 0;
     }
 
     &__card-link-wrapper {
@@ -669,63 +548,85 @@
     }
 
     &__card-link-text {
-    //  display: inline-block;
-    //  font-weight: 300;
-    //  font-size: 16px;
-    //  line-height: 22px;
-    //  margin-right: 16px;
-    //  transition: .3s;
+      font-size: 14px;
+      margin-right: 14px;
       min-width: 0;
     }
 
     &__card-link {
-    //  vertical-align: middle;
-      display: inline-flex;
-      //display: none;
-    //  align-items: center;
-    //  transition: .3s;
-    //  color: $lightColor;
-    //
-    //  .link-arrow {
-    //    display: inline-block;
-    //    position: relative;
-    //    width: 17px;
-    //    height: 12px;
-    //    background: transparent url("../../img/svg/arrow-right.svg") 50% 50%/contain no-repeat;
-    //    transition: .3s;
-    //    //margin-left: 0;
-    //  }
-    //
-    //  &:visited {
-    //    color: $lightColor;
-    //
-    //    .assortment__card-link-text {
-    //      font-weight: 300;
-    //    }
-    //
-    //    .link-arrow {
-    //      //margin-left: 0;
-    //      background: transparent url("../../img/svg/arrow-right.svg") 50% 50%/contain no-repeat;
-    //    }
-    //  }
-    //
-    //  &:hover,  &:active {
-    //    color: $lightColor;
-    //
-    //    .assortment__card-link-text {
-    //      font-weight: bold;
-    //    }
-    //
-    //    .link-arrow {
-    //      //margin-left: 9px;
-    //      background: transparent url("../../img/svg/arrow-right-hovered.svg") 50% 50%/contain no-repeat;
-    //    }
-    //  }
+      //display: inline-flex;
+      display: none;
+
+      //  .link-arrow {
+      //    //margin-left: 0;
+      //  }
+
+      //  &:visited {
+      //    .link-arrow {
+      //      //margin-left: 0;
+      //    }
+      //  }
+
+      //  &:hover,  &:active {
+      //    .link-arrow {
+      //      //margin-left: 9px;
+      //    }
+      //  }
     }
 
     &__card-img {
       width: auto;
       height: 210px;
+    }
+
+    ul.slick-dots {
+      display: inline-flex;
+      height: 100%;
+      position: absolute;
+      bottom: -23px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: $productSlideDots;
+      max-height: 18px;
+    }
+
+    ul.slick-dots li {
+      width: 6px;
+      margin-right: 8px;
+      transition: .3s;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      button {
+        font-size: 0;
+        background-color: $lightTextColor;
+        opacity: .5;
+        border-radius: 50%;
+        width: 100%;
+        height: 6px;
+        line-height: 6px;
+        color: transparent;
+        transition: .3s;
+
+        &:hover, &:focus, &:active, &:focus-visible {
+          background-color: $brightBgColor6;
+          opacity: 1;
+        }
+      }
+
+      &.slick-active {
+        width: 8px;
+        margin-right: 8px;
+
+        button {
+          height: 8px;
+          line-height: 8px;
+          background-color: $brightBgColor6;
+          opacity: 1;
+        }
+      }
     }
   }
 }
@@ -738,11 +639,15 @@
     }
 
     &__card-title {
-      margin-bottom: 29px;
+      margin-bottom: 9px;
     }
 
     &__card-text {
       display: none;
+    }
+
+    &__card-link-wrapper {
+      text-align: center;
     }
   }
 }
@@ -754,6 +659,7 @@
       font-size: 24px;
       line-height: 32px;
     }
+
     &__card-link-text {
       font-size: 14px;
     }
@@ -766,6 +672,19 @@
     &__title {
       padding: 0;
     }
+    &__subtitle {
+      padding: 0;
+    }
+    &__card {
+      min-height: 504px;
+    }
+    &__card-content {
+      min-height: 406px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
 }
+
 /********* assortment END ***********/

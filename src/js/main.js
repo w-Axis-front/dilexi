@@ -6,6 +6,7 @@ import {rootReducer} from "./modules/redux/rootReducer";
 import objectFitImages from "object-fit-images";
 import nav from "./modules/nav";
 import scrollContent from "./modules/scrollContent";
+import slider from "./modules/slider";
 import countTime from "./modules/countTime";
 import updateStore from "./modules/updateStore";
 import animateContent from "./modules/animateContent";
@@ -20,6 +21,7 @@ $(function() {
   nav();
   scrollContent();
   countTime();
+  slider();
   updateStore();
   animateContent();
 });

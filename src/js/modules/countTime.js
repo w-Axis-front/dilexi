@@ -61,6 +61,9 @@ export default function countTime() {
                 store.dispatch(updateTime(t));
                 expected += INTERVAL;
                 setTimeout(step, Math.max(0, INTERVAL - dt)); // take into account drift
+            } else {
+                hoursSpan.innerHTML = '00';
+                minutesSpan.innerHTML = '00';
             }
         }
     }
@@ -70,8 +73,16 @@ export default function countTime() {
     store.subscribe(() => {
         const state = store.getState();
         // daysSpan.innerHTML = state.time.days;
-        hoursSpan.innerHTML = ('0' + state.time.hours).slice(-2);
-        minutesSpan.innerHTML = ('0' + state.time.minutes).slice(-2);
+        if (state.time.hours) {
+            hoursSpan.innerHTML = ('0' + state.time.hours).slice(-2);
+        } else {
+            hoursSpan.innerHTML = '00';
+        }
+        if (state.time.minutes) {
+            minutesSpan.innerHTML = ('0' + state.time.minutes).slice(-2);
+        } else {
+            minutesSpan.innerHTML = '00';
+        }
         // secondsSpan.innerHTML = ('0' + state.time.seconds).slice(-2);
     });
 }

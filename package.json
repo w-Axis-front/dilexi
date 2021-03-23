@@ -59,6 +59,7 @@
   },
   "dependencies": {
     "object-fit-images": "^3.2.4",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "slick-carousel": "^1.8.1"
   }
 }
