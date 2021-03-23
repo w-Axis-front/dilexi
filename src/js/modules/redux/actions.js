@@ -1,4 +1,11 @@
-import { SET_PRICES, UPDATE_ITEMS, DELETE_ITEM, UPDATE_TIME } from "./types";
+import {
+	UPDATE_TIME,
+	SET_PRICES,
+	ADD_ITEM,
+	INCREMENT_ITEM,
+	DECREMET_ITEM,
+	DELETE_ITEM
+} from "./types";
 
 export function setPrices({ price, oldPrice }) {
 	return {
@@ -7,10 +14,24 @@ export function setPrices({ price, oldPrice }) {
 	};
 }
 
-export function updateItems(chosenProduct) {
+export function addItem(chosenProduct) {
 	return {
-		type: UPDATE_ITEMS,
+		type: ADD_ITEM,
 		payload: chosenProduct
+	};
+}
+
+export function incrementItem(id) {
+	return {
+		type: INCREMENT_ITEM,
+		payload: id
+	};
+}
+
+export function decrementItem(id) {
+	return {
+		type: DECREMET_ITEM,
+		payload: id
 	};
 }
 

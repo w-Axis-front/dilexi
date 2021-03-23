@@ -28,9 +28,9 @@ section.assortment#assortment
                                 .assortment__card-count-wrapper
                                     p.assortment__card-count-text= assortmentContent.count_text
                                     p.assortment__card-count
-                                        span.assortment__card-count-subtract= "-"
+                                        span.assortment__card-count-subtract.js_dec-item= "-"
                                         span.assortment__card-count-number= assortmentContent.count_number
-                                        span.assortment__card-count-add= "+"
+                                        span.assortment__card-count-add.js_inc-item= "+"
                         img&attributes(card.img).assortment__card-img
                     .assortment__card-footer
                         button.button-action.button.js_card-btn= assortmentContent.btn
@@ -79,9 +79,9 @@ section.assortment#assortment
                         .assortment__card-count-wrapper
                             p.assortment__card-count-text= assortmentContent.count_text
                             p.assortment__card-count
-                                span.assortment__card-count-subtract= "-"
+                                span.assortment__card-count-subtract.js_dec-item= "-"
                                 span.assortment__card-count-number= assortmentContent.count_number
-                                span.assortment__card-count-add= "+"
+                                span.assortment__card-count-add.js_inc-item= "+"
                     .assortment__card-footer
                         button.button-action.button.js_card-btn= assortmentContent.btn
                             .assortment__card-btn-icon
