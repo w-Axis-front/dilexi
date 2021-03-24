@@ -8,7 +8,7 @@
     font-weight: bold;
     font-size: 38px;
     line-height: 48px;
-    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: "pnum" on, "lnum" on;
     padding: 0 102px;
   }
 
@@ -95,6 +95,20 @@
         background-color: $monochromeBgColor3;
       }
     }
+
+    &.active {
+      border-color: #000;
+
+      .assortment {
+        &__card-bin-btn {
+          display: flex;
+        }
+
+        &__card-link {
+          display: inline-flex;
+        }
+      }
+    }
   }
 
   &__card-content-wrapper {
@@ -114,7 +128,7 @@
     font-weight: bold;
     font-size: 28px;
     line-height: 28px;
-    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: "pnum" on, "lnum" on;
     margin-bottom: 12px;
   }
 
@@ -129,7 +143,7 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 21px;
-    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: "pnum" on, "lnum" on;
     color: $darkColor;
     opacity: 0.2;
     position: relative;
@@ -170,7 +184,8 @@
       cursor: pointer;
       padding: 0 3px;
 
-      &:hover {
+      &:hover,
+      &.active {
         font-weight: bold;
       }
     }
@@ -232,7 +247,7 @@
     font-weight: 900;
     font-size: 38px;
     line-height: 45px;
-    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: "pnum" on, "lnum" on;
     margin-bottom: 7px;
   }
 
@@ -252,7 +267,7 @@
     width: 42.5px;
     height: 42.5px;
     border-radius: 50%;
-    transition: .3s
+    transition: 0.3s;
   }
 
   &__card-btn-img {
@@ -272,7 +287,10 @@
       background-color: $lightColor;
     }
 
-    &:hover, &:focus, &:active, &:focus-visible {
+    &:hover,
+    &:focus,
+    &:active,
+    &:focus-visible {
       .assortment__card-btn-icon {
         background-color: $btnColor;
       }
@@ -287,7 +305,7 @@
 
     .stroke {
       stroke: $darkColor;
-      transition: .3s;
+      transition: 0.3s;
     }
   }
 
@@ -302,7 +320,7 @@
     align-items: center;
     margin-right: 47px;
     cursor: pointer;
-    transition: .3s;
+    transition: 0.3s;
 
     &:hover {
       border: 2px solid $lightColor;
@@ -322,7 +340,7 @@
     font-size: 16px;
     line-height: 22px;
     margin-right: 16px;
-    transition: .3s;
+    transition: 0.3s;
     min-width: 187px;
   }
 
@@ -331,7 +349,7 @@
     //display: inline-flex;
     display: none;
     align-items: center;
-    transition: .3s;
+    transition: 0.3s;
     color: $lightColor;
 
     .link-arrow {
@@ -339,8 +357,9 @@
       position: relative;
       width: 17px;
       height: 12px;
-      background: transparent url("../../img/svg/arrow-right.svg") 50% 50%/contain no-repeat;
-      transition: .3s;
+      background: transparent url("../../img/svg/arrow-right.svg") 50% 50% /
+        contain no-repeat;
+      transition: 0.3s;
       //margin-left: 0;
     }
 
@@ -353,11 +372,13 @@
 
       .link-arrow {
         //margin-left: 0;
-        background: transparent url("../../img/svg/arrow-right.svg") 50% 50%/contain no-repeat;
+        background: transparent url("../../img/svg/arrow-right.svg") 50% 50% /
+          contain no-repeat;
       }
     }
 
-    &:hover, &:active {
+    &:hover,
+    &:active {
       color: $lightColor;
 
       .assortment__card-link-text {
@@ -366,7 +387,8 @@
 
       .link-arrow {
         //margin-left: 9px;
-        background: transparent url("../../img/svg/arrow-right-hovered.svg") 50% 50%/contain no-repeat;
+        background: transparent url("../../img/svg/arrow-right-hovered.svg") 50%
+          50% / contain no-repeat;
       }
     }
   }
@@ -395,7 +417,7 @@
       font-size: 18px;
       line-height: 26px;
       letter-spacing: 0.02em;
-      font-feature-settings: 'pnum' on, 'lnum' on;
+      font-feature-settings: "pnum" on, "lnum" on;
       color: $lightTextColor;
       margin-bottom: 9px;
       padding: 0 20px;
@@ -538,7 +560,7 @@
 
     &__card-bin-btn {
       //display: flex;
-        display: none;
+      display: none;
       margin-right: 0;
     }
 
@@ -593,7 +615,7 @@
     ul.slick-dots li {
       width: 6px;
       margin-right: 8px;
-      transition: .3s;
+      transition: 0.3s;
 
       &:last-of-type {
         margin-right: 0;
@@ -602,15 +624,18 @@
       button {
         font-size: 0;
         background-color: $lightTextColor;
-        opacity: .5;
+        opacity: 0.5;
         border-radius: 50%;
         width: 100%;
         height: 6px;
         line-height: 6px;
         color: transparent;
-        transition: .3s;
+        transition: 0.3s;
 
-        &:hover, &:focus, &:active, &:focus-visible {
+        &:hover,
+        &:focus,
+        &:active,
+        &:focus-visible {
           background-color: $brightBgColor6;
           opacity: 1;
         }

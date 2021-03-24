@@ -1,16 +1,22 @@
 import { combineReducers } from "redux";
 import {
 	SET_PRICES,
-	ADD_ITEM,
+	SET_PRODUCTS,
+	ADD_TO_CART,
+	REMOVE_FROM_CART,
 	INCREMENT_ITEM,
 	DECREMET_ITEM,
-	DELETE_ITEM
+	SET_ITEM_SIZE,
+	REMOVE_ITEM_SIZE,
+	SET_ERRORS
 } from "./types";
 
 const initialCartState = {
-	chosenProducts: [],
+	products: [],
 	price: 0,
-	oldPrice: 0
+	oldPrice: 0,
+	currency: "",
+	hasErrors: false
 };
 
 function cartReducer(state = initialCartState, action) {
@@ -19,56 +25,100 @@ function cartReducer(state = initialCartState, action) {
 			return {
 				...state,
 				price: action.payload.price,
-				oldPrice: action.payload.oldPrice
+				oldPrice: action.payload.oldPrice,
+				currency: action.payload.currency
 			};
-		case ADD_ITEM:
-			const isAlreadyBuyed =
-				state.chosenProducts.filter((p) => p.id == action.payload.id).length >
-				0;
-			return isAlreadyBuyed
-				? state
-				: {
-						...state,
-						chosenProducts: [...state.chosenProducts, action.payload]
-				  };
-		case INCREMENT_ITEM:
-			let itemFound = false;
-			const itemsWithInc = state.chosenProducts.map((product) => {
-				if (product.id == action.payload) {
-					itemFound = true;
-					product.count++;
-				}
-				return product;
-			});
+		case SET_PRODUCTS:
 			return {
 				...state,
-				chosenProducts: itemFound
-					? itemsWithInc
-					: [...itemsWithInc, { id: action.payload, count: 1 }]
+				products: action.payload
+			};
+		case ADD_TO_CART:
+			return {
+				...state,
+				products: state.products.map((product) => {
+					const p = { ...product };
+					if (p.id == action.payload) p.added = true;
+					return p;
+				})
+			};
+		case REMOVE_FROM_CART:
+			return {
+				...state,
+				products: state.products.map((product) => {
+					const p = { ...product };
+					if (p.id == action.payload) p.added = false;
+					return p;
+				})
+			};
+		case INCREMENT_ITEM:
+			return {
+				...state,
+				products: state.products.map((product) => {
+					const p = { ...product };
+					if (p.id == action.payload) {
+						p.count++;
+						const pSizes = [...p.sizes];
+						pSizes.push(null);
+						p.sizes = pSizes;
+					}
+					return p;
+				})
 			};
 		case DECREMET_ITEM:
-			const itemsWithDec = state.chosenProducts.reduce((accum, product) => {
-				if (product.id == action.payload) {
-					if (product.count > 1) {
-						product.count--;
-						accum.push(product);
+			return {
+				...state,
+				products: state.products.map((product) => {
+					const p = { ...product };
+					if (p.id == action.payload) {
+						if (p.count > 1) {
+							p.count--;
+							const pSizes = [...p.sizes];
+							pSizes.pop();
+							p.sizes = pSizes;
+						} else {
+							p.added = false;
+						}
 					}
-				} else {
-					accum.push(product);
-				}
-				return accum;
-			}, []);
-			return {
-				...state,
-				chosenProducts: itemsWithDec
+					return p;
+				})
 			};
-		case DELETE_ITEM:
-			const itemsWithoutDel = state.chosenProducts.filter(
-				(p) => p.id != action.payload
-			);
+		case SET_ITEM_SIZE:
 			return {
 				...state,
-				chosenProducts: itemsWithoutDel
+				products: state.products.map((product) => {
+					const p = { ...product };
+					if (p.id == action.payload.id) {
+						const pSizes = [...p.sizes];
+						pSizes[action.payload.position] = action.payload.size;
+						p.sizes = pSizes;
+					}
+					return p;
+				})
+			};
+		case REMOVE_ITEM_SIZE:
+			return {
+				...state,
+				products: state.products.map((product) => {
+					const p = { ...product };
+					if (p.id == action.payload.id) {
+						if (p.count == 1) {
+							p.added = false;
+						} else {
+							const pSizes = p.sizes.filter(
+								(s, i) => i != action.payload.position
+							);
+							p.sizes = pSizes;
+							p.count = pSizes.length;
+						}
+					}
+					return p;
+				})
+			};
+		case SET_ERRORS:
+			return {
+				...state,
+				hasErrors: action.payload
 			};
 		default:
 			return state;

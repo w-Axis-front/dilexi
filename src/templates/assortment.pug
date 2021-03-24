@@ -29,8 +29,9 @@ section.assortment#assortment
                         button.button-action.button.js_card-btn= assortmentContent.btn
                             .assortment__card-btn-icon
                                 img&attributes(assortmentContent.btn_img).assortment__card-btn-img
-                        .assortment__card-bin-btn
+                        .assortment__card-bin-btn.js_card-remove
                             svg(class="assortment__card-bin-btn-img" width="22" height="25" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg")
+                              g#trash
                                 rect(x="3.89334" y="4.37292" width="13.7502" height="18.877" class="stroke" stroke-width="2")
                                 path(d="M0.00762939 4.08069H21.5922" class="stroke" stroke-width="2")
                                 path(d="M8.08713 8.09106V19.8859" class="stroke" stroke-width="2")
@@ -67,14 +68,14 @@ section.assortment#assortment
                                 .assortment__card-count-wrapper
                                     p.assortment__card-count-text= assortmentContent.count_text
                                     p.assortment__card-count
-                                        span.assortment__card-count-subtract= "-"
+                                        span.assortment__card-count-subtract.js_dec-item= "-"
                                         span.assortment__card-count-number= assortmentContent.count_number
-                                        span.assortment__card-count-add= "+"
+                                        span.assortment__card-count-add.js_inc-item= "+"
                         .assortment__card-footer
                             button.button-action.button.js_card-btn= assortmentContent.btn
                                 .assortment__card-btn-icon
                                     img&attributes(assortmentContent.btn_img).assortment__card-btn-img
-                            .assortment__card-bin-btn
+                            .assortment__card-bin-btn.js_card-remove
                                 svg(class="assortment__card-bin-btn-img" width="22" height="25" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg")
                                     rect(x="3.89334" y="4.37292" width="13.7502" height="18.877" class="stroke" stroke-width="2")
                                     path(d="M0.00762939 4.08069H21.5922" class="stroke" stroke-width="2")
@@ -116,7 +117,7 @@ section.assortment#assortment
                             button.button-action.button.js_card-btn= assortmentContent.btn
                                 .assortment__card-btn-icon
                                     img&attributes(assortmentContent.btn_img).assortment__card-btn-img
-                            .assortment__card-bin-btn
+                            .assortment__card-bin-btn.js_card-remove
                                 svg(class="assortment__card-bin-btn-img" width="22" height="25" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg")
                                     rect(x="3.89334" y="4.37292" width="13.7502" height="18.877" class="stroke" stroke-width="2")
                                     path(d="M0.00762939 4.08069H21.5922" class="stroke" stroke-width="2")
@@ -158,7 +159,7 @@ section.assortment#assortment
                             button.button-action.button.js_card-btn= assortmentContent.btn
                                 .assortment__card-btn-icon
                                     img&attributes(assortmentContent.btn_img).assortment__card-btn-img
-                            .assortment__card-bin-btn
+                            .assortment__card-bin-btn.js_card-remove
                                 svg(class="assortment__card-bin-btn-img" width="22" height="25" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg")
                                     rect(x="3.89334" y="4.37292" width="13.7502" height="18.877" class="stroke" stroke-width="2")
                                     path(d="M0.00762939 4.08069H21.5922" class="stroke" stroke-width="2")

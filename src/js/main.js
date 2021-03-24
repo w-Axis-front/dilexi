@@ -16,12 +16,12 @@ export const store = createStore(
 	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
-$(function() {
-  objectFitImages();
-  nav();
-  scrollContent();
-  // countTime();
-  slider();
-  updateStore();
-  animateContent();
+$(function () {
+	objectFitImages();
+	nav();
+	scrollContent();
+	countTime();
+	slider();
+	updateStore();
+	animateContent();
 });
