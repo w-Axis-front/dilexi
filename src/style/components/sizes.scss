@@ -1,7 +1,7 @@
 /*********** SIZES *************/
 .sizes {
   overflow: hidden;
-  margin-bottom: 120px;
+  margin-bottom: 108px;
 
   .container {
     padding: 0 102px;
@@ -84,14 +84,17 @@
   &__row-content {
     .sizes__column2 {
       padding-left: 22px;
+      text-align: left;
     }
 
     .sizes__column4 {
       padding-left: 22px;
+      text-align: left;
     }
 
     .sizes__column5 {
       padding-left: 25px;
+      text-align: left;
     }
   }
 
@@ -115,7 +118,7 @@
 // max 991.9px
 @media screen and (max-width: $lg) {
   .sizes {
-    margin-bottom: 79px;
+    margin-bottom: 67px;
 
     .container {
       padding: 0 20px;
@@ -181,6 +184,61 @@
 // max 767.9px
 @media screen and (max-width: $md) {
   .sizes {
+    &__table-scrollable {
+      overflow: auto;
+      padding-bottom: 12px;
+
+      &::-webkit-scrollbar {
+        height: 6px;
+        border-width: 2px;
+        cursor: pointer;
+      }
+
+      &::-webkit-scrollbar-button {
+        display: none;
+        background-color: transparent;
+      }
+
+      &::-webkit-scrollbar-track {
+        border-radius: 2px;
+      }
+
+      &::-webkit-scrollbar-track-piece {
+        background-color: rgba(166, 144, 124, 0.5);
+        border-color: $lightColor;
+        border-width: 2px 0;
+        border-style: solid;
+        margin: 0 20px;
+      }
+
+      &::-webkit-scrollbar-corner {
+        background-color: transparent;
+        display: none;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $mainColor;
+        cursor: pointer;
+        border-radius: 2px;
+      }
+
+      &::-webkit-resizer {
+        background-color: transparent;
+        display: none;
+      }
+    }
+
+    &__table-wrapper {
+      max-width: none;
+      width: 734px;
+      margin: 0;
+    }
+  }
+}
+
+// max 575.9px
+@media screen and (max-width: $xs) {
+  .sizes {
     &__title {
       font-size: 28px;
       margin-bottom: 0;
@@ -191,5 +249,4 @@
     }
   }
 }
-
 /********* SIZES END ***********/
