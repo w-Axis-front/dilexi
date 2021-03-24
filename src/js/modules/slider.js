@@ -21,6 +21,13 @@ export default function slider() {
     }
 
     if (testimonialsSlider) {
+        $(testimonialsSlider).on('init', function (event, slick) {
+            const bigImages = $(testimonialsSlider).children(".testimonials__slide-img");
+            $(bigImages).each(function () {
+                $(this).css({"display": "none"});
+            });
+        });
+
         $(testimonialsSlider).slick({
             prevArrow: '<button type="button" class="testimonials__slide-prev-btn"><svg class="testimonials__slide-arrow-img" width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
                 '<path class="stroke" d="M12.75 0.929625L1.67963 12L12.75 23.0704" stroke-width="2"/>\n' +
@@ -38,14 +45,14 @@ export default function slider() {
             // pauseOnHover: true
         });
 
-                const slideIconImgs = $(".testimonials__slide-icon-wrapper");
-        slideIconImgs.each(function() {
+        const slideIconImgs = $(".testimonials__slide-icon-wrapper");
+        slideIconImgs.each(function () {
             $(this).on("click", function (idx, element) {
                 const __this = $(element);
                 const chosenIconImg = __this.find(".testimonials__slide-img-icon");
-                const chosenIconImgSrc = $(chosenIconImg).attr( "src" );
-                const chosenIconImgAlt = $(chosenIconImg).attr( "alt" );
-                const chosenIconImgSrcset = $(chosenIconImg).attr( "srcset" );
+                const chosenIconImgSrc = $(chosenIconImg).attr("src");
+                const chosenIconImgAlt = $(chosenIconImg).attr("alt");
+                const chosenIconImgSrcset = $(chosenIconImg).attr("srcset");
                 const imagesWrapper = __this.parents(".testimonials__slide-images-wrapper");
                 const chosenImg = $(imagesWrapper).find(".testimonials__slide-img");
 
