@@ -6,6 +6,7 @@
   &__content-wrapper {
     padding: 0 102px;
     display: flex;
+    overflow: hidden;
   }
 
   &__title {
@@ -19,7 +20,7 @@
   }
 
   &__accordion {
-    min-height: 248px;
+    min-height: 249px;
   }
 
   &__accordion-trigger {

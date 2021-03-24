@@ -394,7 +394,289 @@
       }
     ]
   },
-  "testimonials": "",
+  "testimonials": {
+    "title": "Они уже носят блузки Dilexi",
+    "slides": [
+      {
+        "customer_name": "Сандро Фрейтас",
+        "text": "Симпатичная вещь! Сверх быстрая доставк все пришло как раз вовремя — подарил жене на праздник, вроде довольная.",
+        "img1": {
+          "src": "img/testimonials/1_1.jpg",
+          "alt": "Customer photo 1",
+          "srcset": "img/testimonials/1_1@2x.jpg 2x"
+        },
+        "img2": {
+          "src": "img/testimonials/1_2.jpg",
+          "alt": "Customer photo 2",
+          "srcset": "img/testimonials/1_2@2x.jpg 2x"
+        },
+        "img3": {
+          "src": "img/testimonials/1_3.jpg",
+          "alt": "Customer photo 3",
+          "srcset": "img/testimonials/1_3@2x.jpg 2x"
+        }
+      },
+      {
+        "customer_name": "Серафина Перес",
+        "text": "Мне подошло, реально крутая кофточка!! сидит стильно, и удобная посадка, и я вообще очень люблю хлопковую ткань. как думаете, мне идет такой цвет?",
+        "img1": {
+          "src": "img/testimonials/1_1.jpg",
+          "alt": "Customer photo 1",
+          "srcset": "img/testimonials/1_1@2x.jpg 2x"
+        },
+        "img2": {
+          "src": "img/testimonials/1_2.jpg",
+          "alt": "Customer photo 2",
+          "srcset": "img/testimonials/1_2@2x.jpg 2x"
+        },
+        "img3": {
+          "src": "img/testimonials/1_3.jpg",
+          "alt": "Customer photo 3",
+          "srcset": "img/testimonials/1_3@2x.jpg 2x"
+        }
+      },
+      {
+        "customer_name": "Дебора Мачадо",
+        "text": "Заказывала две блузы серого и желтого цвета качество ткани ООЧЕНЬ хорошее. Фасон нормальный, длина умеренная, цвет сочный… что еще нужно..",
+        "img1": {
+          "src": "img/testimonials/1_1.jpg",
+          "alt": "Customer photo 1",
+          "srcset": "img/testimonials/1_1@2x.jpg 2x"
+        },
+        "img2": {
+          "src": "img/testimonials/1_2.jpg",
+          "alt": "Customer photo 2",
+          "srcset": "img/testimonials/1_2@2x.jpg 2x"
+        },
+        "img3": {
+          "src": "img/testimonials/1_3.jpg",
+          "alt": "Customer photo 3",
+          "srcset": "img/testimonials/1_3@2x.jpg 2x"
+        }
+      },
+      {
+        "customer_name": "Валентина Ионеско",
+        "text": "Открыла, примерила... класс!!! Девочки, я очень довольна... мне прям все полошло — заказывайте, не пожалеете! Будем носить на работу с удовольствием!!!!",
+        "img1": {
+          "src": "img/testimonials/1_1.jpg",
+          "alt": "Customer photo 1",
+          "srcset": "img/testimonials/1_1@2x.jpg 2x"
+        },
+        "img2": {
+          "src": "img/testimonials/1_2.jpg",
+          "alt": "Customer photo 2",
+          "srcset": "img/testimonials/1_2@2x.jpg 2x"
+        },
+        "img3": {
+          "src": "img/testimonials/1_3.jpg",
+          "alt": "Customer photo 3",
+          "srcset": "img/testimonials/1_3@2x.jpg 2x"
+        }
+      },
+      {
+        "customer_name": "Ванда Георгиу",
+        "text": "Купила такую в пяти цветах, так и не смогла определиться с одним :))). Делитесь, с чем вы такие обычно носите?",
+        "img1": {
+          "src": "img/testimonials/1_1.jpg",
+          "alt": "Customer photo 1",
+          "srcset": "img/testimonials/1_1@2x.jpg 2x"
+        },
+        "img2": {
+          "src": "img/testimonials/1_2.jpg",
+          "alt": "Customer photo 2",
+          "srcset": "img/testimonials/1_2@2x.jpg 2x"
+        },
+        "img3": {
+          "src": "img/testimonials/1_3.jpg",
+          "alt": "Customer photo 3",
+          "srcset": "img/testimonials/1_3@2x.jpg 2x"
+        }
+      },
+      {
+        "customer_name": "Алин Заитук",
+        "text": "долго выбирала, решила купить синюю, она хорошая, но цвет на картинке более сочный… хотя, может, мне пора отвыкать от ярких цветов? А так — все подошло заказала XL на 48",
+        "img1": {
+          "src": "img/testimonials/1_1.jpg",
+          "alt": "Customer photo 1",
+          "srcset": "img/testimonials/1_1@2x.jpg 2x"
+        },
+        "img2": {
+          "src": "img/testimonials/1_2.jpg",
+          "alt": "Customer photo 2",
+          "srcset": "img/testimonials/1_2@2x.jpg 2x"
+        },
+        "img3": {
+          "src": "img/testimonials/1_3.jpg",
+          "alt": "Customer photo 3",
+          "srcset": "img/testimonials/1_3@2x.jpg 2x"
+        }
+      },{
+        "customer_name": "Доминик Байку",
+        "text": "Получила товар через 2 недели. Ткань смесь поли эстера с хлопком не просвечивается, приятная к телу. Что думаете о горчичном цвете? По-моему он идеально подходит брюнеткам.",
+        "img1": {
+          "src": "img/testimonials/1_1.jpg",
+          "alt": "Customer photo 1",
+          "srcset": "img/testimonials/1_1@2x.jpg 2x"
+        },
+        "img2": {
+          "src": "img/testimonials/1_2.jpg",
+          "alt": "Customer photo 2",
+          "srcset": "img/testimonials/1_2@2x.jpg 2x"
+        },
+        "img3": {
+          "src": "img/testimonials/1_3.jpg",
+          "alt": "Customer photo 3",
+          "srcset": "img/testimonials/1_3@2x.jpg 2x"
+        }
+      },{
+        "customer_name": "Надия Фуртадо",
+        "text": "Превосходное качество, а главное размер совпал!!!! один в один! я так рада, спасибо большое продавцу и отзывам, честно неожидала, что так хорошо на мне сядет) )))",
+        "img1": {
+          "src": "img/testimonials/1_1.jpg",
+          "alt": "Customer photo 1",
+          "srcset": "img/testimonials/1_1@2x.jpg 2x"
+        },
+        "img2": {
+          "src": "img/testimonials/1_2.jpg",
+          "alt": "Customer photo 2",
+          "srcset": "img/testimonials/1_2@2x.jpg 2x"
+        },
+        "img3": {
+          "src": "img/testimonials/1_3.jpg",
+          "alt": "Customer photo 3",
+          "srcset": "img/testimonials/1_3@2x.jpg 2x"
+        }
+      },{
+        "customer_name": "Соня Аврамеску",
+        "text": "Товар соответствует описанию, ткань плотная, мягкая, пошив качественный, заказывала в двух цветах. Носить буду.",
+        "img1": {
+          "src": "img/testimonials/1_1.jpg",
+          "alt": "Customer photo 1",
+          "srcset": "img/testimonials/1_1@2x.jpg 2x"
+        },
+        "img2": {
+          "src": "img/testimonials/1_2.jpg",
+          "alt": "Customer photo 2",
+          "srcset": "img/testimonials/1_2@2x.jpg 2x"
+        },
+        "img3": {
+          "src": "img/testimonials/1_3.jpg",
+          "alt": "Customer photo 3",
+          "srcset": "img/testimonials/1_3@2x.jpg 2x"
+        }
+      },{
+        "customer_name": "Николета Диакону",
+        "text": "блузка отменного качества, а еще неожиданно… цвет как на картинке!. мне редко так везет( у меня 52 размер, заказывала XXL, села как влитая. Спасибо!",
+        "img1": {
+          "src": "img/testimonials/1_1.jpg",
+          "alt": "Customer photo 1",
+          "srcset": "img/testimonials/1_1@2x.jpg 2x"
+        },
+        "img2": {
+          "src": "img/testimonials/1_2.jpg",
+          "alt": "Customer photo 2",
+          "srcset": "img/testimonials/1_2@2x.jpg 2x"
+        },
+        "img3": {
+          "src": "img/testimonials/1_3.jpg",
+          "alt": "Customer photo 3",
+          "srcset": "img/testimonials/1_3@2x.jpg 2x"
+        }
+      },{
+        "customer_name": "Ана Павленко",
+        "text": "Ой, на мне смотрится прям как и на модели)) — свободно, эта блузка скрывает лишнее и подходит почти на любой случай. думаю для лета самое то. Ношу с юбкой или джинсами.",
+        "img1": {
+          "src": "img/testimonials/1_1.jpg",
+          "alt": "Customer photo 1",
+          "srcset": "img/testimonials/1_1@2x.jpg 2x"
+        },
+        "img2": {
+          "src": "img/testimonials/1_2.jpg",
+          "alt": "Customer photo 2",
+          "srcset": "img/testimonials/1_2@2x.jpg 2x"
+        },
+        "img3": {
+          "src": "img/testimonials/1_3.jpg",
+          "alt": "Customer photo 3",
+          "srcset": "img/testimonials/1_3@2x.jpg 2x"
+        }
+      },{
+        "customer_name": "Эма Илиеску",
+        "text": "На размер М села отлично, ткань приятная. Продавцу спасибо.",
+        "img1": {
+          "src": "img/testimonials/1_1.jpg",
+          "alt": "Customer photo 1",
+          "srcset": "img/testimonials/1_1@2x.jpg 2x"
+        },
+        "img2": {
+          "src": "img/testimonials/1_2.jpg",
+          "alt": "Customer photo 2",
+          "srcset": "img/testimonials/1_2@2x.jpg 2x"
+        },
+        "img3": {
+          "src": "img/testimonials/1_3.jpg",
+          "alt": "Customer photo 3",
+          "srcset": "img/testimonials/1_3@2x.jpg 2x"
+        }
+      },{
+        "customer_name": "Мируна Силиваси",
+        "text": "Заказала уже вторую блузку, очень понраилась. Фасон и качество супер, можно носить хоть каждый день. Только никак не могу подобрать к ней украшения.",
+        "img1": {
+          "src": "img/testimonials/1_1.jpg",
+          "alt": "Customer photo 1",
+          "srcset": "img/testimonials/1_1@2x.jpg 2x"
+        },
+        "img2": {
+          "src": "img/testimonials/1_2.jpg",
+          "alt": "Customer photo 2",
+          "srcset": "img/testimonials/1_2@2x.jpg 2x"
+        },
+        "img3": {
+          "src": "img/testimonials/1_3.jpg",
+          "alt": "Customer photo 3",
+          "srcset": "img/testimonials/1_3@2x.jpg 2x"
+        }
+      },
+      {
+        "customer_name": "Лоретта Алесси",
+        "text": "Ура!!! получила, блузки класс! мне, как швее, сложно угодить, но здесь… Швы ровные, нитки не торчат, воротник не обработан, но думаю, это так и должно быть, буду ждать тепла и носить.))",
+        "img1": {
+          "src": "img/testimonials/1_1.jpg",
+          "alt": "Customer photo 1",
+          "srcset": "img/testimonials/1_1@2x.jpg 2x"
+        },
+        "img2": {
+          "src": "img/testimonials/1_2.jpg",
+          "alt": "Customer photo 2",
+          "srcset": "img/testimonials/1_2@2x.jpg 2x"
+        },
+        "img3": {
+          "src": "img/testimonials/1_3.jpg",
+          "alt": "Customer photo 3",
+          "srcset": "img/testimonials/1_3@2x.jpg 2x"
+        }
+      },
+      {
+        "customer_name": "Туллия Чикалезе",
+        "text": "Товар по качеству и пошиву хорош. Буду носить, идеально угадала с размером (брала побольше, чтобы посвободнее было). Ткань плотная, цвет соответствует, доставка быстрая.",
+        "img1": {
+          "src": "img/testimonials/1_1.jpg",
+          "alt": "Customer photo 1",
+          "srcset": "img/testimonials/1_1@2x.jpg 2x"
+        },
+        "img2": {
+          "src": "img/testimonials/1_2.jpg",
+          "alt": "Customer photo 2",
+          "srcset": "img/testimonials/1_2@2x.jpg 2x"
+        },
+        "img3": {
+          "src": "img/testimonials/1_3.jpg",
+          "alt": "Customer photo 3",
+          "srcset": "img/testimonials/1_3@2x.jpg 2x"
+        }
+      }
+    ]
+  },
   "order": {
     "title": "Успей заказать модные универсальные блузки по супер цене!",
     "subtitle": "Ваш заказ:",

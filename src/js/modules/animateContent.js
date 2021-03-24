@@ -21,15 +21,14 @@ export default function animateContent() {
     }
 
     function rotateBtns(e) {
-        if (e.matches) {
-            if (rotatedBtns.length > 0) {
-                for (let i = 0; i < rotatedBtns.length; i++) {
-                    const rotatedBtn = $(rotatedBtns[i]);
-                    const rotatedBtnPart = rotatedBtn.find(".main__button");
-                    const btnText = rotatedBtn.find(".main__button-text");
-                    const btnStaticPart = rotatedBtn.find(".main__button-arrow");
-                    const btnStaticPartSVG = rotatedBtn.find(".stroke");
-
+        if (rotatedBtns.length > 0) {
+            for (let i = 0; i < rotatedBtns.length; i++) {
+                const rotatedBtn = $(rotatedBtns[i]);
+                const rotatedBtnPart = rotatedBtn.find(".main__button");
+                const btnText = rotatedBtn.find(".main__button-text");
+                const btnStaticPart = rotatedBtn.find(".main__button-arrow");
+                const btnStaticPartSVG = rotatedBtn.find(".stroke");
+                if (e.matches) {
                     rotatedBtn.on('touchstart', function () {
                         // event.preventDefault();
                         enterHandler(rotatedBtnPart, btnText, btnStaticPart, btnStaticPartSVG);
