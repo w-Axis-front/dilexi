@@ -1,4 +1,8 @@
 /*********** testimonials *************/
+.slick-slide img.testimonials__slide-img {
+  display: none;
+}
+
 .testimonials {
   background-color: $mainColor;
   padding: 43px 0 57px 0;
@@ -32,7 +36,7 @@
 
   &__slide-icons-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 20px;
   }
 
@@ -49,6 +53,11 @@
 
   &__slide-icon-wrapper {
     position: relative;
+    margin-right: 16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     &::after {
       position: absolute;

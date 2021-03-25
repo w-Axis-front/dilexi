@@ -1,11 +1,11 @@
 export default function countTime() {
     const DEADLINE = new Date(Date.parse(new Date()) + 6 * 60 * 60 * 1000);
+    const INTERVAL = 1000; // ms
     const clock = document.getElementById("countdown");
     // const daysSpan = clock.querySelector('.days');
     const hoursSpan = clock.querySelector('.hours');
     const minutesSpan = clock.querySelector('.minutes');
-    // const secondsSpan = clock.querySelector('.seconds');
-    const INTERVAL = 1000; // ms
+    const secondsSpan = clock.querySelector('.seconds');
 
     function getTimeRemaining(endtime) {
         let t;
@@ -28,23 +28,14 @@ export default function countTime() {
         }
         localStorage.setItem("remindedTimeDilexi", JSON.stringify(remindedTimeObg));
         if (remindedTimeObg.total > 999) {
-            // daysSpan.innerHTML = remindedTimeObg.days;
-            if (remindedTimeObg.hours) {
-                hoursSpan.innerHTML = ('0' + remindedTimeObg.hours).slice(-2);
-            } else {
-                hoursSpan.innerHTML = '00';
-            }
-            if (remindedTimeObg.minutes) {
-                minutesSpan.innerHTML = ('0' + remindedTimeObg.minutes).slice(-2);
-            } else {
-                minutesSpan.innerHTML = '00';
-            }
-            // secondsSpan.innerHTML = ('0' + remindedTimeObg.seconds).slice(-2);
+            hoursSpan.innerHTML = ('0' + remindedTimeObg.hours).slice(-2);
+            minutesSpan.innerHTML = ('0' + remindedTimeObg.minutes).slice(-2);
+            secondsSpan.innerHTML = ('0' + remindedTimeObg.seconds).slice(-2);
         } else {
             // daysSpan.innerHTML = '00';
             hoursSpan.innerHTML = '00';
             minutesSpan.innerHTML = '00';
-            // secondsSpan.innerHTML = '00';
+            secondsSpan.innerHTML = '00';
         }
         return remindedTimeObg;
     }

@@ -19,14 +19,14 @@ main#pageTop
                     p.main__timer-text= mainContent.timer_text
                     .countdown#countdown
                         .countdown-number
-                            span.days.countdown-time= mainContent.remaining_time
-                            span.countdown-text= mainContent.days
-                        .countdown-number
                             span.hours.countdown-time= mainContent.remaining_time
                             span.countdown-text= mainContent.hours
                         .countdown-number
                             span.minutes.countdown-time= mainContent.remaining_time
                             span.countdown-text= mainContent.minutes
+                        .countdown-number
+                            span.seconds.countdown-time= mainContent.remaining_time
+                            span.countdown-text= mainContent.seconds
                     .main__text-wrapper
                         p.main__text= mainContent.text
                         a(href=mainContent.btn_path).main__button-wrapper.js_rotated-btn
