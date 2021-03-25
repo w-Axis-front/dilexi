@@ -15,7 +15,7 @@ import { store } from "../main";
 
 export default function updateStore() {
 	//set card prices to store
-	store.dispatch(setPrices({ price: 23, oldPrice: 109, currency: "€" }));
+	store.dispatch(setPrices({ price: +window.price || 0, oldPrice: +window.oldPrice || 0, currency: window.currency || "" }));
 	//set cards to store
 	const cards = $(".assortment__grid .assortment__card");
 	store.dispatch(
@@ -268,7 +268,7 @@ export default function updateStore() {
 										s == size ? " active" : ""
 									} js_set-size">${s}</p>`,
 								""
-							)}</div></div><p class="order__no_size-err">${orderSizeError}</p></div><div class='order__table-column5'><span>${orderPriceTitle}:</span> <span>${currency}${price}</span></div></div></div>`
+							)}</div></div><p class="order__no_size-err">${orderSizeError}</p></div><div class='order__table-column5'><span>${orderPriceTitle}:</span> <span>${price} ${currency}</span></div></div></div>`
 						);
 
 						//append delet btn
@@ -287,8 +287,8 @@ export default function updateStore() {
 		}, []);
 
 		totalItemsNode.text(totalItems);
-		totalPriceNode.text(currency + totalItems * oldPrice);
-		totalDiscounrPriceNode.text(currency + totalItems * price);
+		totalPriceNode.text(totalItems * oldPrice + " " + currency);
+		totalDiscounrPriceNode.text(totalItems * price + " " + currency);
 		toggleSubmitBtn(totalItems);
 
 		if (totalItems > 0) {
